@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IiE-MO-zsM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--返却-->
+        <scene sceneID="zwy-53-6p0">
+            <objects>
+                <viewController title="返却" id="IiE-MO-zsM" customClass="ReturningViewController" customModule="karimono" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F5A-v4-Clj" customClass="I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Thb-us-Ae0" customClass="BaseButton" customModule="karimono" customModuleProvider="target">
+                                <rect key="frame" x="20" y="303.5" width="335" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="qre-4l-my5"/>
+                                </constraints>
+                                <state key="normal" title="返すものの名前を入力する"/>
+                                <connections>
+                                    <action selector="didTap:" destination="IiE-MO-zsM" eventType="touchUpInside" id="CE1-J5-ENb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Thb-us-Ae0" firstAttribute="leading" secondItem="St7-gB-iO3" secondAttribute="leading" constant="20" id="GcJ-kc-BAV"/>
+                            <constraint firstItem="St7-gB-iO3" firstAttribute="trailing" secondItem="Thb-us-Ae0" secondAttribute="trailing" constant="20" id="mdI-dZ-Qry"/>
+                            <constraint firstItem="Thb-us-Ae0" firstAttribute="centerY" secondItem="F5A-v4-Clj" secondAttribute="centerY" id="pOU-tS-IEY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="St7-gB-iO3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gv0-MF-rcW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55" y="50"/>
+        </scene>
+    </scenes>
+</document>

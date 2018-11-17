@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="371" id="QGG-yE-vgb" customClass="BorrowingItemCell" customModule="karimono" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="371"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QGG-yE-vgb" id="kKv-tg-BOY">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="370.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="52g-tX-fQO" customClass="DropShadowBackgournd" customModule="karimono" customModuleProvider="target">
+                        <rect key="frame" x="12" y="12" width="351" height="109"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="87l-be-1Xj">
+                                <rect key="frame" x="42" y="30" width="267" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kameke" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPf-qZ-Ts1" customClass="SmallLabel" customModule="karimono" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="267" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="「思考・論理・分析」" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyK-3A-ai1" customClass="BigLabel" customModule="karimono" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="25" width="267" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="87l-be-1Xj" secondAttribute="bottom" constant="30" id="EIZ-TD-X6e"/>
+                            <constraint firstAttribute="trailing" secondItem="87l-be-1Xj" secondAttribute="trailing" constant="42" id="FJX-aR-jgn"/>
+                            <constraint firstItem="87l-be-1Xj" firstAttribute="top" secondItem="52g-tX-fQO" secondAttribute="top" constant="30" id="cXA-6p-QsX"/>
+                            <constraint firstItem="87l-be-1Xj" firstAttribute="leading" secondItem="52g-tX-fQO" secondAttribute="leading" constant="42" id="fQl-Gn-lBy"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="52g-tX-fQO" secondAttribute="bottom" constant="12" id="2FL-BY-JYR"/>
+                    <constraint firstAttribute="trailing" secondItem="52g-tX-fQO" secondAttribute="trailing" constant="12" id="Dw8-KZ-2uv"/>
+                    <constraint firstItem="52g-tX-fQO" firstAttribute="leading" secondItem="kKv-tg-BOY" secondAttribute="leading" constant="12" id="IgJ-wV-fKq"/>
+                    <constraint firstItem="52g-tX-fQO" firstAttribute="top" secondItem="kKv-tg-BOY" secondAttribute="top" constant="12" id="qQb-QL-NM6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="background" destination="52g-tX-fQO" id="EDo-JA-fl7"/>
+                <outlet property="borrowerName" destination="gPf-qZ-Ts1" id="Vgy-jY-hiB"/>
+                <outlet property="itemNameLabel" destination="kyK-3A-ai1" id="Jfl-fB-Hca"/>
+            </connections>
+            <point key="canvasLocation" x="396" y="-117.39130434782609"/>
+        </tableViewCell>
+    </objects>
+</document>

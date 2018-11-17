@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4e4-7A-79F">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Text Picker View Controller-->
+        <scene sceneID="a2o-qw-Yel">
+            <objects>
+                <viewController id="4e4-7A-79F" customClass="TextPickerViewController" customModule="karimono" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V0L-Hq-Rct">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UL7-PC-7Z0">
+                                <rect key="frame" x="20" y="306.5" width="335" height="54"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSd-Fn-COM" customClass="SmallBoldLabel" customModule="karimono" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="テキスト" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UKo-Wr-zF0" customClass="BaseTextFeild" customModule="karimono" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="25" width="335" height="29"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="didEndEditing:" destination="4e4-7A-79F" eventType="editingDidEndOnExit" id="TwD-wg-ZSx"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="UKo-Wr-zF0" firstAttribute="leading" secondItem="UL7-PC-7Z0" secondAttribute="leading" id="CwV-FH-HwD"/>
+                                    <constraint firstAttribute="trailing" secondItem="PSd-Fn-COM" secondAttribute="trailing" id="FZV-1B-Uzj"/>
+                                    <constraint firstItem="PSd-Fn-COM" firstAttribute="leading" secondItem="UL7-PC-7Z0" secondAttribute="leading" id="Uoz-Ci-Fwg"/>
+                                    <constraint firstAttribute="trailing" secondItem="UKo-Wr-zF0" secondAttribute="trailing" id="otm-N9-UvS"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j6b-qF-pOF" firstAttribute="trailing" secondItem="UL7-PC-7Z0" secondAttribute="trailing" constant="20" id="1BT-GW-NYc"/>
+                            <constraint firstItem="UL7-PC-7Z0" firstAttribute="leading" secondItem="j6b-qF-pOF" secondAttribute="leading" constant="20" id="oJh-8k-k0a"/>
+                            <constraint firstItem="UL7-PC-7Z0" firstAttribute="centerY" secondItem="V0L-Hq-Rct" secondAttribute="centerY" id="xRQ-9i-WA1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="j6b-qF-pOF"/>
+                    </view>
+                    <connections>
+                        <outlet property="textFeild" destination="UKo-Wr-zF0" id="xU1-Wh-svF"/>
+                        <outlet property="titleLabel" destination="PSd-Fn-COM" id="6na-Ox-K7Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EuM-3K-e9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65" y="-84"/>
+        </scene>
+    </scenes>
+</document>
