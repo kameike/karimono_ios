@@ -27,6 +27,9 @@ struct RequestHandler<T> {
     let onError: (KarimonoRequestError) -> ()
 }
 
+struct Empty: Codable {
+}
+
 
 
 struct RequestHandlerProvider {
@@ -37,6 +40,61 @@ struct RequestHandlerProvider {
 
     let getRequest: GetBorrwingItemsHandlable
 }
+
+enum RequestType {
+    case get
+    case post
+    case put
+    case delete
+
+    var toString :String {
+        switch self {
+        case .get:  return "GET"
+        case .post: return "POST"
+        case .put: return "PUT"
+        case .delete: return "DELETE"
+        }
+    }
+}
+
+protocol RequestBase: RequestDescriable {}
+
+extension RequestBase {
+    var host : String {
+        return  "https://karimono.kameike.net"
+    }
+
+    var contentType: String {
+        return "application/json"
+    }
+
+    var accept: String {
+        return "application/json"
+    }
+}
+
+protocol RequestDescriable {
+    associatedtype Body: Encodable
+    associatedtype Response: Decodable
+
+    var requestType: RequestType{get}
+    var host: String { get }
+    var contentType: String { get }
+    var accept: String { get }
+    var payload: Body { get }
+    var path: String { get }
+}
+
+struct BorrowingItemRequest: RequestBase {
+    let payload: Borrowing
+
+    let requestType: RequestType = .post
+    let path = "items/borrow"
+    typealias Response = Empty
+    typealias Body = Borrowing
+}
+
+
 
 class RequestManager {
     let host: String
