@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22AA5752AB625570A88E7774 /* Pods_karimonoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528A5B13EE497EDD9032CCD0 /* Pods_karimonoTests.framework */; };
 		AA0BB37921BBD69800C7665A /* NameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0BB37821BBD69800C7665A /* NameRepository.swift */; };
 		AA0BB37B21BBDA6F00C7665A /* BaseTextFeild.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0BB37A21BBDA6F00C7665A /* BaseTextFeild.swift */; };
 		AA0BB37E21BBDBAE00C7665A /* TextPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0BB37D21BBDBAE00C7665A /* TextPickerViewController.swift */; };
@@ -36,6 +37,8 @@
 		AAF552DE21BBBFF000803D1B /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF552DD21BBBFF000803D1B /* BaseLabel.swift */; };
 		AAF552E121BBC04900803D1B /* UIColor+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF552E021BBC04900803D1B /* UIColor+Extenstions.swift */; };
 		AAF552E321BBC28C00803D1B /* SmallRegulerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF552E221BBC28C00803D1B /* SmallRegulerLabel.swift */; };
+		CE8971389D2D026D5A01D5AB /* Pods_karimono.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB5E3A8F1177B878E9EB4B4 /* Pods_karimono.framework */; };
+		CF69F9465FD48C083F732199 /* Pods_karimonoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131C45965E34DC5FCBAF77FF /* Pods_karimonoUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		131C45965E34DC5FCBAF77FF /* Pods_karimonoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_karimonoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		528A5B13EE497EDD9032CCD0 /* Pods_karimonoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_karimonoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52927FA12A33FED366B095E5 /* Pods-karimonoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-karimonoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-karimonoUITests/Pods-karimonoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		57BFAED132F412C51BF880D9 /* Pods-karimono.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-karimono.release.xcconfig"; path = "Pods/Target Support Files/Pods-karimono/Pods-karimono.release.xcconfig"; sourceTree = "<group>"; };
+		6A3FB046B0967FC4AB605D1B /* Pods-karimonoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-karimonoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-karimonoUITests/Pods-karimonoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6FF73BF90A7F5D2C692A2B1B /* Pods-karimonoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-karimonoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-karimonoTests/Pods-karimonoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8893EA0C902D4947C2D2B3E3 /* Pods-karimono.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-karimono.debug.xcconfig"; path = "Pods/Target Support Files/Pods-karimono/Pods-karimono.debug.xcconfig"; sourceTree = "<group>"; };
+		8EB5E3A8F1177B878E9EB4B4 /* Pods_karimono.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_karimono.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99F931521016529FE4403A01 /* Pods-karimonoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-karimonoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-karimonoTests/Pods-karimonoTests.release.xcconfig"; sourceTree = "<group>"; };
 		AA0BB37821BBD69800C7665A /* NameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameRepository.swift; sourceTree = "<group>"; };
 		AA0BB37A21BBDA6F00C7665A /* BaseTextFeild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextFeild.swift; sourceTree = "<group>"; };
 		AA0BB37D21BBDBAE00C7665A /* TextPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPickerViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8971389D2D026D5A01D5AB /* Pods_karimono.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22AA5752AB625570A88E7774 /* Pods_karimonoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,12 +126,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF69F9465FD48C083F732199 /* Pods_karimonoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B13C03333C3451C15AAC878 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8EB5E3A8F1177B878E9EB4B4 /* Pods_karimono.framework */,
+				528A5B13EE497EDD9032CCD0 /* Pods_karimonoTests.framework */,
+				131C45965E34DC5FCBAF77FF /* Pods_karimonoUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AA0BB37C21BBDB9E00C7665A /* TextPicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +200,8 @@
 				AADB43A821A04D23009BF0C4 /* karimonoTests */,
 				AADB43B321A04D24009BF0C4 /* karimonoUITests */,
 				AADB439221A04D22009BF0C4 /* Products */,
+				F1DF41DB665CC23990788C59 /* Pods */,
+				5B13C03333C3451C15AAC878 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -272,6 +299,19 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F1DF41DB665CC23990788C59 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8893EA0C902D4947C2D2B3E3 /* Pods-karimono.debug.xcconfig */,
+				57BFAED132F412C51BF880D9 /* Pods-karimono.release.xcconfig */,
+				6FF73BF90A7F5D2C692A2B1B /* Pods-karimonoTests.debug.xcconfig */,
+				99F931521016529FE4403A01 /* Pods-karimonoTests.release.xcconfig */,
+				52927FA12A33FED366B095E5 /* Pods-karimonoUITests.debug.xcconfig */,
+				6A3FB046B0967FC4AB605D1B /* Pods-karimonoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -279,9 +319,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AADB43B921A04D24009BF0C4 /* Build configuration list for PBXNativeTarget "karimono" */;
 			buildPhases = (
+				9039B4450160898269A5924C /* [CP] Check Pods Manifest.lock */,
 				AADB438D21A04D22009BF0C4 /* Sources */,
 				AADB438E21A04D22009BF0C4 /* Frameworks */,
 				AADB438F21A04D22009BF0C4 /* Resources */,
+				D73B290C18B32CFC3B7D745C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,6 +338,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AADB43BC21A04D24009BF0C4 /* Build configuration list for PBXNativeTarget "karimonoTests" */;
 			buildPhases = (
+				E12BE275C77CFE6E1F71EBEA /* [CP] Check Pods Manifest.lock */,
 				AADB43A121A04D23009BF0C4 /* Sources */,
 				AADB43A221A04D23009BF0C4 /* Frameworks */,
 				AADB43A321A04D23009BF0C4 /* Resources */,
@@ -314,6 +357,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AADB43BF21A04D24009BF0C4 /* Build configuration list for PBXNativeTarget "karimonoUITests" */;
 			buildPhases = (
+				A81A269D8E9EF883479B7F0C /* [CP] Check Pods Manifest.lock */,
 				AADB43AC21A04D24009BF0C4 /* Sources */,
 				AADB43AD21A04D24009BF0C4 /* Frameworks */,
 				AADB43AE21A04D24009BF0C4 /* Resources */,
@@ -402,6 +446,85 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9039B4450160898269A5924C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-karimono-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A81A269D8E9EF883479B7F0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-karimonoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D73B290C18B32CFC3B7D745C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-karimono/Pods-karimono-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-karimono/Pods-karimono-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E12BE275C77CFE6E1F71EBEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-karimonoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AADB438D21A04D22009BF0C4 /* Sources */ = {
@@ -599,6 +722,7 @@
 		};
 		AADB43BA21A04D24009BF0C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8893EA0C902D4947C2D2B3E3 /* Pods-karimono.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -617,6 +741,7 @@
 		};
 		AADB43BB21A04D24009BF0C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57BFAED132F412C51BF880D9 /* Pods-karimono.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -635,6 +760,7 @@
 		};
 		AADB43BD21A04D24009BF0C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FF73BF90A7F5D2C692A2B1B /* Pods-karimonoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -655,6 +781,7 @@
 		};
 		AADB43BE21A04D24009BF0C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99F931521016529FE4403A01 /* Pods-karimonoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -675,6 +802,7 @@
 		};
 		AADB43C021A04D24009BF0C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52927FA12A33FED366B095E5 /* Pods-karimonoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -694,6 +822,7 @@
 		};
 		AADB43C121A04D24009BF0C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A3FB046B0967FC4AB605D1B /* Pods-karimonoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

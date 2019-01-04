@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 struct Borrowing: Codable {
     let user: String
     let item: String
@@ -23,14 +22,12 @@ struct KarimonoRequestError: Codable {
 }
 
 struct RequestHandler<T> {
-    let onSucess: (T) -> ()
-    let onError: (KarimonoRequestError) -> ()
+    let onSucess: (T) -> Void
+    let onError: (KarimonoRequestError) -> Void
 }
 
 struct Empty: Codable {
 }
-
-
 
 struct RequestHandlerProvider {
     static let shared = RequestHandlerProvider.init(
@@ -47,7 +44,7 @@ enum RequestType {
     case put
     case delete
 
-    var toString :String {
+    var toString: String {
         switch self {
         case .get:  return "GET"
         case .post: return "POST"
@@ -60,7 +57,7 @@ enum RequestType {
 protocol RequestBase: RequestDescriable {}
 
 extension RequestBase {
-    var host : String {
+    var host: String {
         return  "https://karimono.kameike.net"
     }
 
@@ -77,7 +74,7 @@ protocol RequestDescriable {
     associatedtype Body: Encodable
     associatedtype Response: Decodable
 
-    var requestType: RequestType{get}
+    var requestType: RequestType {get}
     var host: String { get }
     var contentType: String { get }
     var accept: String { get }
@@ -94,8 +91,6 @@ struct BorrowingItemRequest: RequestBase {
     typealias Body = Borrowing
 }
 
-
-
 class RequestManager {
     let host: String
 
@@ -103,7 +98,7 @@ class RequestManager {
         self.host = host
     }
 
-    static let shared = RequestManager(host:  "https://karimono.kameike.net")
+    static let shared = RequestManager(host: "https://karimono.kameike.net")
 
     func borrowItem(_ borrowing: Borrowing) {
         let result = try! JSONEncoder().encode(borrowing)
@@ -114,18 +109,18 @@ class RequestManager {
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.httpMethod = "POST"
 
-        URLSession.shared.dataTask(with: request) { data, response, err in
+        URLSession.shared.dataTask(with: request) { _, _, _ in
 
         }.resume()
     }
 
-    func getItems(_ handler: @escaping ([Borrowing]) -> ()) {
+    func getItems(_ handler: @escaping ([Borrowing]) -> Void) {
         var request = URLRequest(url: URL(string: "\(host)/items")!)
         request.addValue("application/json", forHTTPHeaderField: "Content-type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.httpMethod = "GET"
 
-        URLSession.shared.dataTask(with: request) { data, response, err in
+        URLSession.shared.dataTask(with: request) { data, _, _ in
             guard let data = data else {
                 return
             }
@@ -144,7 +139,7 @@ class RequestManager {
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.httpMethod = "POST"
 
-        URLSession.shared.dataTask(with: request) { data, response, err in
+        URLSession.shared.dataTask(with: request) { _, _, _ in
 
         }.resume()
     }

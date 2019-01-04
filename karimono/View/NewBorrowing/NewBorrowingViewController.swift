@@ -17,7 +17,6 @@ class NewBorrowingViewController: UIViewController {
         return vc
     }
 
-
     @IBAction func sendDidTapped(_ sender: Any) {
         let vc = TextPickerViewController.viewController(describer: TextPickerDescriber.init(
             title: "借りるものの名前を入力してください",
@@ -45,6 +44,6 @@ extension NewBorrowingViewController: TextPickerDelegate {
             user: name,
             item: item
         ))
-        
+
     }
 }

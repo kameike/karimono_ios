@@ -27,11 +27,9 @@ class ReturningViewController: UIViewController {
     }
 }
 
-
 extension ReturningViewController: TextPickerDelegate {
     func textPcikerViewController(_ viewController: TextPickerViewController, setText text: String) {
         let item = text
         RequestManager.shared.returnItem(Returning(item: item))
     }
 }
-

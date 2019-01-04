@@ -65,7 +65,7 @@ class BorrowingItemsViewController: UIViewController {
             },
             onError: { [weak self] error in
                 let vc = UIAlertController(title: "エラー", message: error.reason, preferredStyle: .alert)
-                let action = UIAlertAction(title: "ok", style: .default , handler: nil)
+                let action = UIAlertAction(title: "ok", style: .default, handler: nil)
                 vc.addAction(action)
                 self?.present(vc, animated: true, completion: nil)
                 self?.hideLoading()
@@ -79,7 +79,7 @@ class BorrowingItemsViewController: UIViewController {
         view.addSubview(loadingView)
         NSLayoutConstraint.activate([
             loadingView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loadingView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            loadingView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
             ])
     }
 
@@ -88,7 +88,6 @@ class BorrowingItemsViewController: UIViewController {
         refleshControl.endRefreshing()
     }
 }
-
 
 extension BorrowingItemsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

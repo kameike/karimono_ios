@@ -22,7 +22,7 @@ class StubBorrwingItemsHandlaber: GetBorrwingItemsHandlable {
                 }
             } else {
                 DispatchQueue.main.async {
-                    var result:[Borrowing] = []
+                    var result: [Borrowing] = []
                     for _ in 0...Int.random(in: 1...3) {
                         result.append(Borrowing(user: UUID().uuidString, item: "スタブのアイテム"))
                     }

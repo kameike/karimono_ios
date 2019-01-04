@@ -42,14 +42,14 @@ class LoadingView: UIView {
             loading.topAnchor.constraint(equalTo: view.topAnchor, constant: margin),
             loading.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -margin),
             loading.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin),
-            loading.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin),
+            loading.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin)
             ])
 
         addSubview(view)
 
         NSLayoutConstraint.activate([
             view.centerXAnchor.constraint(equalTo: centerXAnchor),
-            view.centerYAnchor.constraint(equalTo: centerYAnchor),
+            view.centerYAnchor.constraint(equalTo: centerYAnchor)
             ])
 
         loading.startAnimating()

@@ -23,7 +23,6 @@ extension UIColor {
     }
 }
 
-
 extension UIColor {
     struct Karimono {
         static var textPrimary: UIColor {
