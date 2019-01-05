@@ -7,38 +7,9 @@
 //
 
 import Foundation
+import RxSwift
 
-struct Borrowing: Codable {
-    let user: String
-    let item: String
-}
-
-struct Returning: Codable {
-    let item: String
-}
-
-struct KarimonoRequestError: Codable {
-    let reason: String
-}
-
-struct RequestHandler<T> {
-    let onSucess: (T) -> Void
-    let onError: (KarimonoRequestError) -> Void
-}
-
-struct Empty: Codable {
-}
-
-struct RequestHandlerProvider {
-    static let shared = RequestHandlerProvider.init(
-        // getRequest: StubBorrwingItemsHandlaber()
-        getRequest: RequestManager.shared
-    )
-
-    let getRequest: GetBorrwingItemsHandlable
-}
-
-enum RequestType {
+enum RequestMethod {
     case get
     case post
     case put
@@ -54,11 +25,15 @@ enum RequestType {
     }
 }
 
+struct KarimonoRequestError: Codable {
+    let reason: String
+}
+
 protocol RequestBase: RequestDescriable {}
 
 extension RequestBase {
     var host: String {
-        return  "https://karimono.kameike.net"
+        return  "http://192.168.2.3:1323"
     }
 
     var contentType: String {
@@ -74,7 +49,7 @@ protocol RequestDescriable {
     associatedtype Body: Encodable
     associatedtype Response: Decodable
 
-    var requestType: RequestType {get}
+    var method: RequestMethod {get}
     var host: String { get }
     var contentType: String { get }
     var accept: String { get }
@@ -82,65 +57,147 @@ protocol RequestDescriable {
     var path: String { get }
 }
 
-struct BorrowingItemRequest: RequestBase {
-    let payload: Borrowing
+enum RequestState<T> {
+    case loading
+    case complete(T)
+    case error(KarimonoRequestError)
 
-    let requestType: RequestType = .post
-    let path = "items/borrow"
-    typealias Response = Empty
-    typealias Body = Borrowing
+    var generalState: RequestStateWithoutType {
+        switch self {
+        case .loading:
+            return .loading
+        case .complete:
+            return .complete
+        case .error(let e):
+            return .error(e)
+        }
+    }
+
+    var observeComplete: Observable<T> {
+        switch self {
+        case .complete(let r):
+            return .just(r)
+        case .error:
+            return .empty()
+        case .loading:
+            return .empty()
+        }
+    }
 }
 
-class RequestManager {
-    let host: String
+enum RequestStateWithoutType {
+    case loading
+    case complete
+    case error(KarimonoRequestError)
 
-    init (host: String) {
-        self.host = host
+    var isLoading: Bool {
+        switch self {
+        case .complete:
+            return false
+        case .error:
+            return false
+        case .loading:
+            return true
+        }
     }
 
-    static let shared = RequestManager(host: "https://karimono.kameike.net")
+    var observeError: Observable<KarimonoRequestError> {
+        switch self {
+        case .complete:
+            return .empty()
+        case .error(let e):
+            return .just(e)
+        case .loading:
+            return .empty()
+        }
+    }
+}
 
-    func borrowItem(_ borrowing: Borrowing) {
-        let result = try! JSONEncoder().encode(borrowing)
+protocol RequestExecutable {
+    func execRequest<T: RequestDescriable>(handler: T, addtionalHeader: [String: String]) -> Observable<RequestState<T.Response>>
+}
 
-        var request = URLRequest(url: URL(string: "\(host)/items/borrow")!)
+class RequestExecuter: RequestExecutable {
+    func execRequest<T: RequestDescriable>(handler: T, addtionalHeader: [String: String]) -> Observable<RequestState<T.Response>> {
+        let result = try! JSONEncoder().encode(handler.payload)
+
+        var request = URLRequest(url: URL(string: "\(handler.host)/\(handler.path)")!)
         request.httpBody = result
-        request.addValue("application/json", forHTTPHeaderField: "Content-type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.httpMethod = "POST"
+        request.addValue(handler.contentType, forHTTPHeaderField: "Content-type")
+        request.addValue(handler.accept, forHTTPHeaderField: "Accept")
+        request.httpMethod = handler.method.toString
 
-        URLSession.shared.dataTask(with: request) { _, _, _ in
 
-        }.resume()
-    }
 
-    func getItems(_ handler: @escaping ([Borrowing]) -> Void) {
-        var request = URLRequest(url: URL(string: "\(host)/items")!)
-        request.addValue("application/json", forHTTPHeaderField: "Content-type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.httpMethod = "GET"
+        let observable = Observable<RequestState<T.Response>>.create { observabe in
+            print("request to \(request.url?.absoluteString ?? "-")")
+            observabe.onNext(.loading)
+            let task = URLSession.shared.dataTask(with: request) { data, response, err in
+                if let err = err {
+                    print(err.localizedDescription)
+                    if let err = err as? URLError {
+                        if err.code == URLError.timedOut {
+                            observabe.onNext(.error(KarimonoRequestError.init(reason: "接続状況が悪いです")))
+                            observabe.onCompleted()
+                            return
+                        }
 
-        URLSession.shared.dataTask(with: request) { data, _, _ in
-            guard let data = data else {
-                return
+                        if err.code == URLError.notConnectedToInternet {
+                            observabe.onNext(.error(KarimonoRequestError.init(reason: "インターネットがオフラインのようです")))
+                            observabe.onCompleted()
+                            return
+                        }
+                        observabe.onNext(.error(KarimonoRequestError.init(reason: "通信エラー: \(err.code.rawValue)")))
+                        observabe.onCompleted()
+                        return
+
+                    }
+                    observabe.onNext(.error(KarimonoRequestError.init(reason: "通信エラー")))
+                    observabe.onCompleted()
+                    return
+                }
+
+                guard let data = data, let response = response as? HTTPURLResponse else {
+                    observabe.onNext(.error(KarimonoRequestError.init(reason: "通信エラー")))
+                    observabe.onCompleted()
+                    return
+                }
+
+                if response.statusCode >= 500 {
+                    observabe.onNext(.error(KarimonoRequestError.init(reason: "サーバーの調子がおかしいようです")))
+                    observabe.onCompleted()
+                    return
+                }
+
+                if response.statusCode >= 400 {
+                    observabe.onNext(.error(KarimonoRequestError.init(reason: "不正な操作のようです")))
+                    observabe.onCompleted()
+                    return
+                }
+
+                do {
+                    let result = try JSONDecoder().decode(T.Response.self, from: data)
+                    observabe.onNext(.complete(result))
+                    print("request compelete to \(request.url?.absoluteString ?? "-")")
+                    observabe.onCompleted()
+                    return
+                } catch {
+                    let str: String? = String(data: data, encoding: .utf8)
+                    print(str ?? "")
+                    observabe.onNext(.error(KarimonoRequestError.init(reason: "エラー")))
+                    observabe.onCompleted()
+                    return
+                }
             }
-            let result = try! JSONDecoder().decode([Borrowing].self, from: data)
 
-            handler(result.reversed())
-            }.resume()
-    }
+            task.resume()
 
-    func returnItem(_ item: Returning) {
-        let result = try! JSONEncoder().encode(item)
-
-        var request = URLRequest(url: URL(string: "\(host)/items/return")!)
-        request.httpBody = result
-        request.addValue("application/json", forHTTPHeaderField: "Content-type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.httpMethod = "POST"
-
-        URLSession.shared.dataTask(with: request) { _, _, _ in
-
-        }.resume()
+            let disposalbe = Disposables.create {
+                task.cancel()
+            }
+            return disposalbe
+        }
+        return observable
     }
 }
+

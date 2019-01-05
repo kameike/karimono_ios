@@ -11,23 +11,27 @@ import UIKit
 class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        if NameRepository.sheard.hasName {
-            appendBorrowingViews()
-        }
-    }
 
-    func showSetNameView() {
-        let describer = TextPickerDescriber.init(title: "名前またはニックネームを入力してください", placeHolder: "名前", delegate: self)
-        let vc = TextPickerViewController.viewController(describer: describer)
-        present(vc, animated: true, completion: nil)
+        repo.deleteLogin()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if !NameRepository.sheard.hasName {
-            showSetNameView()
+
+        if !repo.hasLogin() {
+            showWelcomeView()
+        } else {
+            appendBorrowingViews()
         }
     }
+
+    let repo = DataRepository(executor: RequestExecuter())
+
+    func showWelcomeView() {
+        let vc = WelcomeViewController.viewController(viewModel: WelcomeViewModel(), repository: repo)
+        present(vc, animated: true, completion: nil)
+    }
+
 
     func appendBorrowingViews() {
         let tabbar = UITabBarController()
@@ -48,12 +52,5 @@ class MainViewController: UIViewController {
         addChild(tabbar)
         view.addSubview(tabbar.view)
         tabbar.didMove(toParent: self)
-    }
-}
-
-extension MainViewController: TextPickerDelegate {
-    func textPcikerViewController(_ viewController: TextPickerViewController, setText text: String) {
-        NameRepository.sheard.setName(text)
-        appendBorrowingViews()
     }
 }

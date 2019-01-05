@@ -30,20 +30,9 @@ class NewBorrowingViewController: UIViewController {
 
 extension NewBorrowingViewController: TextPickerDelegate {
     func textPcikerViewController(_ viewController: TextPickerViewController, setText text: String) {
-        let name = NameRepository.sheard.name
-        let item = text
+        // let name = NameRepository.sheard.name
 
-        for _ in 0...100 {
-            RequestManager.shared.borrowItem(Borrowing.init(
-                user: name,
-                item: UUID().uuidString
-            ))
-        }
 
-        RequestManager.shared.borrowItem(Borrowing.init(
-            user: name,
-            item: item
-        ))
 
     }
 }

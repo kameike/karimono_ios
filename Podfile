@@ -6,8 +6,8 @@ target 'karimono' do
   use_frameworks!
 
   # Pods for karimono
-  pod 'RxSwift',    '~> 4.0'
-  pod 'RxCocoa',    '~> 4.0'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
   target 'karimonoTests' do
     inherit! :search_paths
