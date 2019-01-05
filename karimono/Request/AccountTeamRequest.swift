@@ -8,17 +8,12 @@
 
 import Foundation
 
-struct CreateTeamRequestData: Codable {
+struct AuthTeamRequestData: Codable {
     let name: String
     let password: String
 }
 
-struct JoinTeamRequestData: Codable {
-    let name: String
-    let password: String
-}
-
-struct JoinOrCreateResponse: Codable {
+struct AuthTeamResponse: Codable {
     let team: Team
 }
 
@@ -26,22 +21,24 @@ struct GetTeamsRespose: Codable {
     let teams: [Team]
 }
 
-struct CreateTeamRequest: RequestBase {
-    typealias Body = CreateTeamRequestData
-    typealias Response = JoinOrCreateResponse
-
-    let payload: CreateTeamRequestData
-    let method: RequestMethod = .post
-    let path: String = "teams"
+enum TeamAuthType {
+    case create
+    case join
 }
 
-struct JoinTeamRequest: RequestBase {
-    typealias Body = JoinTeamRequestData
-    typealias Response = JoinOrCreateResponse
+struct AuthTeamRequest: RequestBase {
+    typealias Body = AuthTeamRequestData
+    typealias Response = AuthTeamResponse
 
-    let payload: JoinTeamRequestData
+    let payload: AuthTeamRequestData
     let method: RequestMethod = .post
-    let path: String = "teams/menbers"
+    let authType: TeamAuthType
+    var path: String {
+        switch authType {
+        case .create: return "team"
+        case .join: return "team/menbers"
+        }
+    }
 }
 
 struct GetTeamsRequest: RequestBase {

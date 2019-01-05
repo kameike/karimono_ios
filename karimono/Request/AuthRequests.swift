@@ -24,6 +24,23 @@ enum AccountAuthRequestType {
     case signUp
 }
 
+struct AccountValidationRquestData: Codable {
+    let name: String
+}
+
+struct AccountValidationResponse: Codable {
+    let available: Bool
+}
+
+struct AccountValidationRquest: RequestBase {
+    typealias Body = AccountValidationRquestData
+    typealias Response = AccountValidationResponse
+
+    let payload: AccountValidationRquestData
+    let method: RequestMethod = .post
+    let path: String = "account/validation"
+}
+
 struct AccountAuthorizeRequest: RequestBase {
     typealias Response = AccountAuthResponse
     typealias Body = AuthRequestData

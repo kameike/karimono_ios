@@ -14,6 +14,9 @@ typealias ShortAsyncData<T> = Observable<RequestState<T>>
 protocol Repositable {
     func singIn(_ payload: AuthRequestData) -> LongAsyncData<AccountAuthorizeRequest.Response>
     func singUp(_ payload: AuthRequestData) -> LongAsyncData<AccountAuthorizeRequest.Response>
+    func checkName(_ payload: AccountValidationRquest) -> LongAsyncData<AccountValidationRquest.Response>
+
+    func getTeams(_ payload: GetTeamsRequest) -> LongAsyncData<GetTeamsRequest.Response>
 
     func registerAccountAuth(_ authData: AccountAuthResponse)
     func getMe() -> Account
@@ -23,6 +26,7 @@ protocol Repositable {
 
 class DataRepository: Repositable {
     let executor: RequestExecutable
+    let secureTokenKey = "x-karimono-token"
     private let accessTokenKey = "accessTokenKey"
     private let accountNameKey = "accountName"
     private let accountIdKey = "accountId"
@@ -68,5 +72,20 @@ class DataRepository: Repositable {
         UserDefaults.standard.removeObject(forKey: accountIdKey)
         UserDefaults.standard.removeObject(forKey: accountNameKey)
         UserDefaults.standard.removeObject(forKey: accessTokenKey)
+    }
+
+    func getTeams(_ payload: GetTeamsRequest) -> LongAsyncData<GetTeamsRequest.Response> {
+        return executor.execRequest(handler: payload, addtionalHeader: requestToken)
+    }
+
+    var requestToken: [String: String] {
+        guard let token = getAccessToken() else {
+            return [:]
+        }
+        return [secureTokenKey: token]
+    }
+
+    func checkName(_ payload: AccountValidationRquest) -> LongAsyncData<AccountValidationRquest.Response> {
+        return executor.execRequest(handler: payload, addtionalHeader: [:])
     }
 }

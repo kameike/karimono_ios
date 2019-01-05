@@ -43,3 +43,26 @@ extension ViewModelInjectable where Self: UIViewController {
     }
 }
 
+protocol NibProvidable {
+    static func loadFromXib() -> UINib
+    static var name: String { get }
+}
+
+extension NibProvidable where Self: UIView {
+    static func loadFromXib() -> UINib {
+        let nib = UINib(nibName: name, bundle: nil)
+        return nib
+    }
+
+    static func loadFromNib() -> Self {
+        let nib = loadFromXib()
+        let view = Self()
+        nib.instantiate(withOwner: view, options: nil)
+        return view
+    }
+
+    static var name: String {
+        return String(describing: self)
+    }
+
+}

@@ -18,7 +18,14 @@ class AccountAuthViewModel: BaseViewModel, RepositoryInjectable {
 
     let canSubmitBehavior = BehaviorRelay<Bool>(value: false)
     let canClosePublish = BehaviorRelay<Bool>(value: false)
+    let accountValidationStatus = BehaviorRelay<AccountNameValidationStatus>(value: .none)
 
+    enum AccountNameValidationStatus {
+        case none
+        case loading
+        case valid
+        case invalid
+    }
 
     init(authorizeType: AccountAuthRequestType) {
         self.authorizeType = authorizeType
@@ -28,6 +35,18 @@ class AccountAuthViewModel: BaseViewModel, RepositoryInjectable {
             .map { $0.0 != "" && $0.1 != "" }
             .bind(to: canSubmitBehavior)
             .disposed(by: bag)
+
+        nameBinder
+            .map { _ in return AccountNameValidationStatus.none }
+            .asDriver(onErrorJustReturn: .none)
+            .drive(accountValidationStatus)
+            .disposed(by: bag)
+
+        nameBinder.asObservable()
+            .flatMap{ Observable.from(optional: $0) }
+            .debounce(0.3, scheduler: MainScheduler.instance)
+            .bind(onNext: { [weak self] name in self?.checkName(name) })
+            .disposed(by: bag)
     }
 
     var name: String {
@@ -36,6 +55,27 @@ class AccountAuthViewModel: BaseViewModel, RepositoryInjectable {
 
     var passowrd: String {
         return passBinder.value ?? ""
+    }
+
+    func checkName(_ name: String) {
+        guard name != "" else {
+            return
+        }
+
+        guard authorizeType == .signUp else {
+            return
+        }
+
+        let req = repository.checkName(AccountValidationRquest.init(payload: AccountValidationRquestData.init(name: name))).publish()
+
+        req.flatMap { $0.observeComplete }
+            .map { $0.available ? AccountNameValidationStatus.valid : AccountNameValidationStatus.invalid }
+            .asDriver(onErrorJustReturn: .none)
+            .drive(accountValidationStatus)
+            .disposed(by: bag)
+
+        accountValidationStatus.accept(.loading)
+        req.connect().disposed(by: bag)
     }
 
     func executeAuth() {

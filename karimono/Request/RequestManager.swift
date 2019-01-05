@@ -122,17 +122,25 @@ class RequestExecuter: RequestExecutable {
         let result = try! JSONEncoder().encode(handler.payload)
 
         var request = URLRequest(url: URL(string: "\(handler.host)/\(handler.path)")!)
-        request.httpBody = result
-        request.addValue(handler.contentType, forHTTPHeaderField: "Content-type")
-        request.addValue(handler.accept, forHTTPHeaderField: "Accept")
+
+        request.setValue(handler.contentType, forHTTPHeaderField: "Content-type")
+        request.setValue(handler.accept, forHTTPHeaderField: "Accept")
+
+        for header in addtionalHeader {
+             request.setValue(header.value, forHTTPHeaderField: header.key)
+        }
+
         request.httpMethod = handler.method.toString
-
-
+        request.timeoutInterval = 5
+        if handler.method != RequestMethod.get && T.Body.self != Empty.self {
+            request.httpBody = result
+        }
 
         let observable = Observable<RequestState<T.Response>>.create { observabe in
             print("request to \(request.url?.absoluteString ?? "-")")
             observabe.onNext(.loading)
             let task = URLSession.shared.dataTask(with: request) { data, response, err in
+                
                 if let err = err {
                     print(err.localizedDescription)
                     if let err = err as? URLError {

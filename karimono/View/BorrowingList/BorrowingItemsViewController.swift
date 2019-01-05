@@ -56,23 +56,6 @@ class BorrowingItemsViewController: UIViewController {
 
     private func fetch() {
         isLoading = true
-        let handler = RequestHandler<[Borrowing]>.init(
-            onSucess: { [weak self] result in
-                self?.borrowingData = result
-                self?.tableView.reloadData()
-                self?.hideLoading()
-                self?.isLoading = false
-            },
-            onError: { [weak self] error in
-                let vc = UIAlertController(title: "エラー", message: error.reason, preferredStyle: .alert)
-                let action = UIAlertAction(title: "ok", style: .default, handler: nil)
-                vc.addAction(action)
-                self?.present(vc, animated: true, completion: nil)
-                self?.hideLoading()
-                self?.isLoading = false
-        })
-
-        RequestHandlerProvider.shared.getRequest.getBorrwingItems(handler: handler)
     }
 
     private func showLoading() {

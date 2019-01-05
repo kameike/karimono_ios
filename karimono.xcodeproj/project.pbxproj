@@ -30,7 +30,21 @@
 		AAB5609621E04C7000D93E1C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB5609521E04C7000D93E1C /* WelcomeViewController.swift */; };
 		AAB5609821E04C9300D93E1C /* WelcomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAB5609721E04C9300D93E1C /* WelcomeViewController.storyboard */; };
 		AAB5609A21E04CA400D93E1C /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB5609921E04CA400D93E1C /* WelcomeViewModel.swift */; };
-		AAB5609C21E0622600D93E1C /* TeamsViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB5609B21E0622600D93E1C /* TeamsViewControler.swift */; };
+		AAB5609C21E0622600D93E1C /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB5609B21E0622600D93E1C /* TeamsViewController.swift */; };
+		AAB560A421E0631200D93E1C /* BorrowingItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAB560A021E0631200D93E1C /* BorrowingItems.storyboard */; };
+		AAB560A521E0631200D93E1C /* BorrowingItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB560A121E0631200D93E1C /* BorrowingItemsViewController.swift */; };
+		AAB560A621E0631200D93E1C /* BorrowingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB560A221E0631200D93E1C /* BorrowingItemCell.swift */; };
+		AAB560A721E0631200D93E1C /* BorrowingItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB560A321E0631200D93E1C /* BorrowingItemCell.xib */; };
+		AAB560A921E063C100D93E1C /* TeamsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAB560A821E063C100D93E1C /* TeamsViewController.storyboard */; };
+		AAB560AB21E063CB00D93E1C /* TeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB560AA21E063CB00D93E1C /* TeamsViewModel.swift */; };
+		AAB560AD21E0644A00D93E1C /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB560AC21E0644A00D93E1C /* TeamCell.xib */; };
+		AAB560AF21E0645700D93E1C /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB560AE21E0645700D93E1C /* TeamCell.swift */; };
+		AAB560B121E0663C00D93E1C /* CreateTeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB560B021E0663C00D93E1C /* CreateTeamCell.xib */; };
+		AAB560B321E0664600D93E1C /* CreateTeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB560B221E0664600D93E1C /* CreateTeamCell.swift */; };
+		AAB560B621E07ACA00D93E1C /* TeamAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB560B521E07ACA00D93E1C /* TeamAuthViewController.swift */; };
+		AAB560B821E07ADD00D93E1C /* TeamAuthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAB560B721E07ADD00D93E1C /* TeamAuthViewController.storyboard */; };
+		AAB560BA21E07AEA00D93E1C /* TeamAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB560B921E07AEA00D93E1C /* TeamAuthViewModel.swift */; };
+		AAB560BC21E0833D00D93E1C /* RxSwift+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB560BB21E0833D00D93E1C /* RxSwift+Extenstions.swift */; };
 		AADB439521A04D22009BF0C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADB439421A04D22009BF0C4 /* AppDelegate.swift */; };
 		AADB439A21A04D22009BF0C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADB439821A04D22009BF0C4 /* Main.storyboard */; };
 		AADB439C21A04D23009BF0C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AADB439B21A04D23009BF0C4 /* Assets.xcassets */; };
@@ -99,7 +113,21 @@
 		AAB5609521E04C7000D93E1C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		AAB5609721E04C9300D93E1C /* WelcomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeViewController.storyboard; sourceTree = "<group>"; };
 		AAB5609921E04CA400D93E1C /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
-		AAB5609B21E0622600D93E1C /* TeamsViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewControler.swift; sourceTree = "<group>"; };
+		AAB5609B21E0622600D93E1C /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
+		AAB560A021E0631200D93E1C /* BorrowingItems.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BorrowingItems.storyboard; sourceTree = "<group>"; };
+		AAB560A121E0631200D93E1C /* BorrowingItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorrowingItemsViewController.swift; sourceTree = "<group>"; };
+		AAB560A221E0631200D93E1C /* BorrowingItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorrowingItemCell.swift; sourceTree = "<group>"; };
+		AAB560A321E0631200D93E1C /* BorrowingItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BorrowingItemCell.xib; sourceTree = "<group>"; };
+		AAB560A821E063C100D93E1C /* TeamsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamsViewController.storyboard; sourceTree = "<group>"; };
+		AAB560AA21E063CB00D93E1C /* TeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewModel.swift; sourceTree = "<group>"; };
+		AAB560AC21E0644A00D93E1C /* TeamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
+		AAB560AE21E0645700D93E1C /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
+		AAB560B021E0663C00D93E1C /* CreateTeamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTeamCell.xib; sourceTree = "<group>"; };
+		AAB560B221E0664600D93E1C /* CreateTeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamCell.swift; sourceTree = "<group>"; };
+		AAB560B521E07ACA00D93E1C /* TeamAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamAuthViewController.swift; sourceTree = "<group>"; };
+		AAB560B721E07ADD00D93E1C /* TeamAuthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamAuthViewController.storyboard; sourceTree = "<group>"; };
+		AAB560B921E07AEA00D93E1C /* TeamAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamAuthViewModel.swift; sourceTree = "<group>"; };
+		AAB560BB21E0833D00D93E1C /* RxSwift+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+Extenstions.swift"; sourceTree = "<group>"; };
 		AADB439121A04D22009BF0C4 /* karimono.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = karimono.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADB439421A04D22009BF0C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AADB439921A04D22009BF0C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -239,9 +267,37 @@
 		AAB5609D21E0622C00D93E1C /* Teams */ = {
 			isa = PBXGroup;
 			children = (
-				AAB5609B21E0622600D93E1C /* TeamsViewControler.swift */,
+				AAB5609B21E0622600D93E1C /* TeamsViewController.swift */,
+				AAB560A821E063C100D93E1C /* TeamsViewController.storyboard */,
+				AAB560AA21E063CB00D93E1C /* TeamsViewModel.swift */,
+				AAB560AC21E0644A00D93E1C /* TeamCell.xib */,
+				AAB560AE21E0645700D93E1C /* TeamCell.swift */,
+				AAB560B021E0663C00D93E1C /* CreateTeamCell.xib */,
+				AAB560B221E0664600D93E1C /* CreateTeamCell.swift */,
 			);
 			path = Teams;
+			sourceTree = "<group>";
+		};
+		AAB5609F21E0631200D93E1C /* BorrowingList */ = {
+			isa = PBXGroup;
+			children = (
+				AAB560A021E0631200D93E1C /* BorrowingItems.storyboard */,
+				AAB560A121E0631200D93E1C /* BorrowingItemsViewController.swift */,
+				AAB560A221E0631200D93E1C /* BorrowingItemCell.swift */,
+				AAB560A321E0631200D93E1C /* BorrowingItemCell.xib */,
+			);
+			path = BorrowingList;
+			sourceTree = "<group>";
+		};
+		AAB560B421E07AB100D93E1C /* TeamAuth */ = {
+			isa = PBXGroup;
+			children = (
+				AAB560B521E07ACA00D93E1C /* TeamAuthViewController.swift */,
+				AAB560B721E07ADD00D93E1C /* TeamAuthViewController.storyboard */,
+				AAB560B921E07AEA00D93E1C /* TeamAuthViewModel.swift */,
+			);
+			name = TeamAuth;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		AABFCBCF21BC0DFA00219B99 /* Main */ = {
@@ -311,6 +367,8 @@
 		AADB43C421A057F1009BF0C4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AAB560B421E07AB100D93E1C /* TeamAuth */,
+				AAB5609F21E0631200D93E1C /* BorrowingList */,
 				AAB5609421E04C4600D93E1C /* Welcome */,
 				AAB5609321DF9F8100D93E1C /* Base */,
 				AABFCBCF21BC0DFA00219B99 /* Main */,
@@ -354,6 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				AAF552E021BBC04900803D1B /* UIColor+Extenstions.swift */,
+				AAB560BB21E0833D00D93E1C /* RxSwift+Extenstions.swift */,
 			);
 			name = Extenstions;
 			path = View;
@@ -484,7 +543,13 @@
 				AAB5608C21DF98E100D93E1C /* AccountAuthViewController.storyboard in Resources */,
 				AADB439F21A04D23009BF0C4 /* LaunchScreen.storyboard in Resources */,
 				AADB439C21A04D23009BF0C4 /* Assets.xcassets in Resources */,
+				AAB560A921E063C100D93E1C /* TeamsViewController.storyboard in Resources */,
+				AAB560A721E0631200D93E1C /* BorrowingItemCell.xib in Resources */,
+				AAB560B821E07ADD00D93E1C /* TeamAuthViewController.storyboard in Resources */,
+				AAB560A421E0631200D93E1C /* BorrowingItems.storyboard in Resources */,
+				AAB560B121E0663C00D93E1C /* CreateTeamCell.xib in Resources */,
 				AADB439A21A04D22009BF0C4 /* Main.storyboard in Resources */,
+				AAB560AD21E0644A00D93E1C /* TeamCell.xib in Resources */,
 				AADB43CA21A0589C009BF0C4 /* NewBorrowing.storyboard in Resources */,
 				AADB43D721A068CB009BF0C4 /* Returning.storyboard in Resources */,
 				AA0BB38021BBDBB800C7665A /* TextPicker.storyboard in Resources */,
@@ -593,11 +658,15 @@
 			files = (
 				AAA60BF221BBD42F00E012A4 /* BaseButton.swift in Sources */,
 				AAF552E121BBC04900803D1B /* UIColor+Extenstions.swift in Sources */,
+				AAB560BA21E07AEA00D93E1C /* TeamAuthViewModel.swift in Sources */,
 				AADB43C821A0585F009BF0C4 /* NewBorrowingViewController.swift in Sources */,
+				AAB560B321E0664600D93E1C /* CreateTeamCell.swift in Sources */,
 				AAB5608021DF475A00D93E1C /* BorrowingRequest.swift in Sources */,
 				AAB5608921DF541D00D93E1C /* DataRepository.swift in Sources */,
 				AAF552DE21BBBFF000803D1B /* BaseLabel.swift in Sources */,
 				AAB5609A21E04CA400D93E1C /* WelcomeViewModel.swift in Sources */,
+				AAB560AB21E063CB00D93E1C /* TeamsViewModel.swift in Sources */,
+				AAB560BC21E0833D00D93E1C /* RxSwift+Extenstions.swift in Sources */,
 				AA64C81721BBCAE600BAE094 /* MainViewController.swift in Sources */,
 				AA2F6BDE21BC2AF1007F5DCF /* AuthRequests.swift in Sources */,
 				AADB43D521A068C1009BF0C4 /* ReturningViewController.swift in Sources */,
@@ -606,14 +675,18 @@
 				AAB5609021DF9F6600D93E1C /* AccountAuthViewModel.swift in Sources */,
 				AAB5608221DF478000D93E1C /* AccountTeamRequest.swift in Sources */,
 				AAB5609621E04C7000D93E1C /* WelcomeViewController.swift in Sources */,
+				AAB560AF21E0645700D93E1C /* TeamCell.swift in Sources */,
 				AADB43D221A060DE009BF0C4 /* RequestManager.swift in Sources */,
+				AAB560A621E0631200D93E1C /* BorrowingItemCell.swift in Sources */,
 				AAB5608E21DF9CB400D93E1C /* BaseViewController.swift in Sources */,
-				AAB5609C21E0622600D93E1C /* TeamsViewControler.swift in Sources */,
+				AAB5609C21E0622600D93E1C /* TeamsViewController.swift in Sources */,
 				AAB5608521DF4ABB00D93E1C /* AccountAuthViewController.swift in Sources */,
 				AA0BB38221BBDD9100C7665A /* SmallBoldLabel.swift in Sources */,
+				AAB560B621E07ACA00D93E1C /* TeamAuthViewController.swift in Sources */,
 				AAB5609221DF9F7A00D93E1C /* BaseViewModel.swift in Sources */,
 				AA2F6BDA21BC2371007F5DCF /* LoadingView.swift in Sources */,
 				AAB5607E21DF446400D93E1C /* ApiModels.swift in Sources */,
+				AAB560A521E0631200D93E1C /* BorrowingItemsViewController.swift in Sources */,
 				AAB5608721DF510900D93E1C /* ViewModelInjectable.swift in Sources */,
 				AA0BB37E21BBDBAE00C7665A /* TextPickerViewController.swift in Sources */,
 				AADB439521A04D22009BF0C4 /* AppDelegate.swift in Sources */,

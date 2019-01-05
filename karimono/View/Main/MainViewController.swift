@@ -11,7 +11,6 @@ import UIKit
 class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
         repo.deleteLogin()
     }
 
@@ -41,13 +40,16 @@ class MainViewController: UIViewController {
         tabbar.tabBar.unselectedItemTintColor = UIColor.Karimono.unselectedTabBar
         tabbar.tabBar.isTranslucent = false
 
-        let list = BorrowingItemsViewController.viewController()
-        let borrowing = NewBorrowingViewController.viewController()
-        let returning = ReturningViewController.viewController()
+//        let list = BorrowingItemsViewController.viewController()
+//        let borrowing = NewBorrowingViewController.viewController()
+//        let returning = ReturningViewController.viewController()
+//
+//        tabbar.addChild(list)
+//        tabbar.addChild(borrowing)
+//        tabbar.addChild(returning)
 
-        tabbar.addChild(list)
-        tabbar.addChild(borrowing)
-        tabbar.addChild(returning)
+        let teams = TeamsViewController.viewController(viewModel: TeamsViewModel(), repository: repo)
+        tabbar.addChild(teams)
 
         addChild(tabbar)
         view.addSubview(tabbar.view)

@@ -18,6 +18,7 @@ class AccountAuthViewController: BaseViewController, ViewModelInjectable {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var authRequestButton: BaseButton!
     @IBOutlet weak var closeViewControllerButton: BaseButton!
+    @IBOutlet weak var accountNameValidationLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,18 @@ class AccountAuthViewController: BaseViewController, ViewModelInjectable {
             .bind(onNext: { [weak self] _ in
                 self?.viewModel.executeAuth()
             })
+            .disposed(by: bag)
+
+        viewModel.accountValidationStatus
+            .map{ v -> String in
+                switch v {
+                case .invalid: return "だめ"
+                case .loading: return "loading..."
+                case .none: return ""
+                case .valid: return "有効"
+                }
+            }
+            .bind(to: accountNameValidationLabel.rx.text)
             .disposed(by: bag)
 
         viewModel.canSubmitBehavior

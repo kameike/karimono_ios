@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="29W-hT-5mJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Teams View Controller-->
+        <scene sceneID="BRm-w3-CUU">
+            <objects>
+                <viewController id="29W-hT-5mJ" customClass="TeamsViewController" customModule="karimono" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wvb-U6-y2k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MC1-Be-qQl">
+                                <rect key="frame" x="0.0" y="188" width="375" height="479"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSo-Fs-yq6" customClass="BaseButton" customModule="karimono" customModuleProvider="target">
+                                <rect key="frame" x="119" y="63" width="121" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MC1-Be-qQl" firstAttribute="top" secondItem="tW2-hu-8U4" secondAttribute="top" constant="168" id="7Br-oU-pJl"/>
+                            <constraint firstItem="tW2-hu-8U4" firstAttribute="bottom" secondItem="MC1-Be-qQl" secondAttribute="bottom" id="O5s-XH-rNI"/>
+                            <constraint firstItem="MC1-Be-qQl" firstAttribute="leading" secondItem="tW2-hu-8U4" secondAttribute="leading" id="U25-6B-lk3"/>
+                            <constraint firstItem="tW2-hu-8U4" firstAttribute="trailing" secondItem="MC1-Be-qQl" secondAttribute="trailing" id="gXG-MO-eKo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tW2-hu-8U4"/>
+                    </view>
+                    <connections>
+                        <outlet property="createTeamButton" destination="iSo-Fs-yq6" id="f6K-jS-ma6"/>
+                        <outlet property="tableView" destination="MC1-Be-qQl" id="1mx-x0-Tv2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K8I-yj-rdu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200.80000000000001" y="83.208395802098963"/>
+        </scene>
+    </scenes>
+</document>
