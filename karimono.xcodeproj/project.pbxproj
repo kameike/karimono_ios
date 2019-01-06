@@ -39,8 +39,6 @@
 		AAB560AB21E063CB00D93E1C /* TeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB560AA21E063CB00D93E1C /* TeamsViewModel.swift */; };
 		AAB560AD21E0644A00D93E1C /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB560AC21E0644A00D93E1C /* TeamCell.xib */; };
 		AAB560AF21E0645700D93E1C /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB560AE21E0645700D93E1C /* TeamCell.swift */; };
-		AAB560B121E0663C00D93E1C /* CreateTeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB560B021E0663C00D93E1C /* CreateTeamCell.xib */; };
-		AAB560B321E0664600D93E1C /* CreateTeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB560B221E0664600D93E1C /* CreateTeamCell.swift */; };
 		AAB560B621E07ACA00D93E1C /* TeamAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB560B521E07ACA00D93E1C /* TeamAuthViewController.swift */; };
 		AAB560B821E07ADD00D93E1C /* TeamAuthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAB560B721E07ADD00D93E1C /* TeamAuthViewController.storyboard */; };
 		AAB560BA21E07AEA00D93E1C /* TeamAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB560B921E07AEA00D93E1C /* TeamAuthViewModel.swift */; };
@@ -122,8 +120,6 @@
 		AAB560AA21E063CB00D93E1C /* TeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewModel.swift; sourceTree = "<group>"; };
 		AAB560AC21E0644A00D93E1C /* TeamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
 		AAB560AE21E0645700D93E1C /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
-		AAB560B021E0663C00D93E1C /* CreateTeamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTeamCell.xib; sourceTree = "<group>"; };
-		AAB560B221E0664600D93E1C /* CreateTeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamCell.swift; sourceTree = "<group>"; };
 		AAB560B521E07ACA00D93E1C /* TeamAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamAuthViewController.swift; sourceTree = "<group>"; };
 		AAB560B721E07ADD00D93E1C /* TeamAuthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamAuthViewController.storyboard; sourceTree = "<group>"; };
 		AAB560B921E07AEA00D93E1C /* TeamAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamAuthViewModel.swift; sourceTree = "<group>"; };
@@ -272,8 +268,6 @@
 				AAB560AA21E063CB00D93E1C /* TeamsViewModel.swift */,
 				AAB560AC21E0644A00D93E1C /* TeamCell.xib */,
 				AAB560AE21E0645700D93E1C /* TeamCell.swift */,
-				AAB560B021E0663C00D93E1C /* CreateTeamCell.xib */,
-				AAB560B221E0664600D93E1C /* CreateTeamCell.swift */,
 			);
 			path = Teams;
 			sourceTree = "<group>";
@@ -547,7 +541,6 @@
 				AAB560A721E0631200D93E1C /* BorrowingItemCell.xib in Resources */,
 				AAB560B821E07ADD00D93E1C /* TeamAuthViewController.storyboard in Resources */,
 				AAB560A421E0631200D93E1C /* BorrowingItems.storyboard in Resources */,
-				AAB560B121E0663C00D93E1C /* CreateTeamCell.xib in Resources */,
 				AADB439A21A04D22009BF0C4 /* Main.storyboard in Resources */,
 				AAB560AD21E0644A00D93E1C /* TeamCell.xib in Resources */,
 				AADB43CA21A0589C009BF0C4 /* NewBorrowing.storyboard in Resources */,
@@ -660,7 +653,6 @@
 				AAF552E121BBC04900803D1B /* UIColor+Extenstions.swift in Sources */,
 				AAB560BA21E07AEA00D93E1C /* TeamAuthViewModel.swift in Sources */,
 				AADB43C821A0585F009BF0C4 /* NewBorrowingViewController.swift in Sources */,
-				AAB560B321E0664600D93E1C /* CreateTeamCell.swift in Sources */,
 				AAB5608021DF475A00D93E1C /* BorrowingRequest.swift in Sources */,
 				AAB5608921DF541D00D93E1C /* DataRepository.swift in Sources */,
 				AAF552DE21BBBFF000803D1B /* BaseLabel.swift in Sources */,

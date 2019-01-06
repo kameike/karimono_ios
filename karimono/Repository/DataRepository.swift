@@ -17,6 +17,8 @@ protocol Repositable {
     func checkName(_ payload: AccountValidationRquest) -> LongAsyncData<AccountValidationRquest.Response>
 
     func getTeams(_ payload: GetTeamsRequest) -> LongAsyncData<GetTeamsRequest.Response>
+    func createTeam(_ payload: AuthTeamRequestData) -> LongAsyncData<TeamAuthRequest.Response>
+    func joinTeam(_ payload: AuthTeamRequestData) -> LongAsyncData<TeamAuthRequest.Response>
 
     func registerAccountAuth(_ authData: AccountAuthResponse)
     func getMe() -> Account
@@ -43,6 +45,15 @@ class DataRepository: Repositable {
     func singUp(_ payload: AuthRequestData) -> LongAsyncData<AccountAuthorizeRequest.Response> {
         let req = AccountAuthorizeRequest.init(payload: payload, requestType: .signUp)
         return executor.execRequest(handler: req, addtionalHeader: [:])
+    }
+
+    func createTeam(_ payload: AuthTeamRequestData) -> LongAsyncData<TeamAuthRequest.Response> {
+        let req = TeamAuthRequest.init(payload: payload, authType: .create)
+        return executor.execRequest(handler: req, addtionalHeader: requestToken)
+    }
+    func joinTeam(_ payload: AuthTeamRequestData) -> LongAsyncData<TeamAuthRequest.Response> {
+        let req = TeamAuthRequest.init(payload: payload, authType: .join)
+        return executor.execRequest(handler: req, addtionalHeader: requestToken)
     }
 
     func registerAccountAuth(_ authData: AccountAuthResponse)  {

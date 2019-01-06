@@ -48,6 +48,24 @@ protocol NibProvidable {
     static var name: String { get }
 }
 
+protocol CellDequeuealbe: NibProvidable {
+    static func register(to: UITableView)
+    static func dequeue(at: IndexPath, from: UITableView) -> Self
+}
+
+extension CellDequeuealbe where Self: UITableViewCell {
+    static func register(to table: UITableView) {
+        table.register(loadFromXib(), forCellReuseIdentifier: name)
+    }
+
+    static func dequeue(at path: IndexPath, from table: UITableView) -> Self {
+        guard let cell = table.dequeueReusableCell(withIdentifier: name, for: path) as? Self else {
+            fatalError()
+        }
+        return cell
+    }
+}
+
 extension NibProvidable where Self: UIView {
     static func loadFromXib() -> UINib {
         let nib = UINib(nibName: name, bundle: nil)

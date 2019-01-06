@@ -8,11 +8,18 @@
 
 import Foundation
 
+struct BorrowingRequestData: Codable {
+    let item: String
+    let memo: String
+    let teamName: String
+}
+
 struct BorrowingItemRequest: RequestBase {
-    let payload: Borrowing
+    typealias Response = Empty
+    typealias Body = BorrowingRequestData
+
+    let payload: BorrowingRequestData
 
     let method: RequestMethod = .post
-    let path = "items/borrow"
-    typealias Response = Empty
-    typealias Body = Borrowing
+    let path = "items/borrowings"
 }

@@ -13,23 +13,32 @@ class BaseViewController: UIViewController {
     let bag: DisposeBag = DisposeBag()
     let loadingView = LoadingView()
 
-    override func viewDidLoad() {
+    func addLoadingView() {
         view.addSubview(loadingView)
 
         NSLayoutConstraint.activate([
             loadingView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             loadingView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             ])
+    }
 
-        loadingView.isHidden = true
+    func removeLoadingView() {
+        loadingView.removeFromSuperview()
+    }
+
+    func switchLoading(shouldShow: Bool) {
+        if shouldShow {
+            addLoadingView()
+        } else {
+            removeLoadingView()
+        }
     }
 }
 
 extension ViewModelInjectable where Self: BaseViewController {
     func bindLoadingStatus() {
         viewModel.requestNeedShowLoading
-            .map { !$0 }
-            .bind(to: loadingView.rx.isHidden)
+            .bind(onNext: {[weak self] isShouldShow in self?.switchLoading(shouldShow: isShouldShow)})
             .disposed(by: bag)
 
         viewModel.errorNeedShowModal

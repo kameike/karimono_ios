@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TeamCell: UITableViewCell, NibProvidable {
+class TeamCell: UITableViewCell, CellDequeuealbe {
 
     @IBOutlet weak var teamNameLabel: UILabel!
 

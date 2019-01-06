@@ -11,7 +11,6 @@ import UIKit
 class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        repo.deleteLogin()
     }
 
     override func viewDidAppear(_ animated: Bool) {

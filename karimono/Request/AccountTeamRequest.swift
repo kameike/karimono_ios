@@ -26,7 +26,7 @@ enum TeamAuthType {
     case join
 }
 
-struct AuthTeamRequest: RequestBase {
+struct TeamAuthRequest: RequestBase {
     typealias Body = AuthTeamRequestData
     typealias Response = AuthTeamResponse
 
@@ -35,8 +35,8 @@ struct AuthTeamRequest: RequestBase {
     let authType: TeamAuthType
     var path: String {
         switch authType {
-        case .create: return "team"
-        case .join: return "team/menbers"
+        case .create: return "teams"
+        case .join: return "teams/menbers"
         }
     }
 }

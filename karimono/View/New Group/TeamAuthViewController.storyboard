@@ -60,8 +60,10 @@
                         <viewLayoutGuide key="safeArea" id="DcZ-Ox-KXU"/>
                     </view>
                     <connections>
-                        <outlet property="teamNamePasswordFeild" destination="aJl-xA-Em1" id="br9-Ag-vuI"/>
-                        <outlet property="teamNameTextFeild" destination="a4d-lB-cj5" id="Onq-vv-gAH"/>
+                        <outlet property="closeButton" destination="XAu-JV-6HR" id="hSt-ru-qVm"/>
+                        <outlet property="submitButton" destination="Kcq-XJ-nu5" id="scg-qJ-th5"/>
+                        <outlet property="teamNamePasswordFeild" destination="aJl-xA-Em1" id="qUG-Yd-to1"/>
+                        <outlet property="teamNameTextFeild" destination="a4d-lB-cj5" id="cdD-Vs-QAU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="duN-gz-4fP" userLabel="First Responder" sceneMemberID="firstResponder"/>

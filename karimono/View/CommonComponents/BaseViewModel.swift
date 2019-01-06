@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 
-class BaseViewModel: RequestStateHoldable {
+class BaseViewModel: NSObject, RequestStateHoldable {
     let bag = DisposeBag()
     var requestNeedShowLoading = BehaviorRelay<Bool>(value: false)
     var errorNeedShowModal = BehaviorRelay<KarimonoRequestError?>(value: nil)

@@ -22,9 +22,22 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSo-Fs-yq6" customClass="BaseButton" customModule="karimono" customModuleProvider="target">
-                                <rect key="frame" x="119" y="63" width="121" height="85"/>
+                                <rect key="frame" x="16" y="66" width="77" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="つくる"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBM-Vw-LbY" customClass="BaseButton" customModule="karimono" customModuleProvider="target">
+                                <rect key="frame" x="112" y="66" width="91" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="参加する"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXh-K3-bpi" customClass="BaseButton" customModule="karimono" customModuleProvider="target">
+                                <rect key="frame" x="234" y="66" width="104" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title=" ログアウト"/>
+                                <connections>
+                                    <action selector="logout:" destination="29W-hT-5mJ" eventType="touchUpInside" id="QW0-Wv-cV6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -38,6 +51,7 @@
                     </view>
                     <connections>
                         <outlet property="createTeamButton" destination="iSo-Fs-yq6" id="f6K-jS-ma6"/>
+                        <outlet property="joinTeamButton" destination="DBM-Vw-LbY" id="rnb-3x-6ky"/>
                         <outlet property="tableView" destination="MC1-Be-qQl" id="1mx-x0-Tv2"/>
                     </connections>
                 </viewController>
