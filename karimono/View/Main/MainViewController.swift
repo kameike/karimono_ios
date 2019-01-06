@@ -25,14 +25,18 @@ class MainViewController: UIViewController {
 
     let repo = DataRepository(executor: RequestExecuter())
 
+
     func showWelcomeView() {
         let vc = WelcomeViewController.viewController(viewModel: WelcomeViewModel(), repository: repo)
         present(vc, animated: true, completion: nil)
     }
 
+    let tabbar = UITabBarController()
 
     func appendBorrowingViews() {
-        let tabbar = UITabBarController()
+        if tabbar.parent != nil {
+            return
+        }
 
         tabbar.tabBar.barTintColor = UIColor.Karimono.main
         tabbar.tabBar.tintColor = .white
@@ -47,9 +51,12 @@ class MainViewController: UIViewController {
 //        tabbar.addChild(borrowing)
 //        tabbar.addChild(returning)
 
-        let teams = TeamsViewController.viewController(viewModel: TeamsViewModel(), repository: repo)
-        tabbar.addChild(teams)
 
+
+        let teams = TeamsViewController.viewController(viewModel: TeamsViewModel(), repository: repo)
+        let nav = UINavigationController(rootViewController: teams)
+        tabbar.addChild(nav)
+        
         addChild(tabbar)
         view.addSubview(tabbar.view)
         tabbar.didMove(toParent: self)

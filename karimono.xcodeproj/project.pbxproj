@@ -49,8 +49,6 @@
 		AADB439F21A04D23009BF0C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADB439D21A04D23009BF0C4 /* LaunchScreen.storyboard */; };
 		AADB43AA21A04D23009BF0C4 /* karimonoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADB43A921A04D23009BF0C4 /* karimonoTests.swift */; };
 		AADB43B521A04D24009BF0C4 /* karimonoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADB43B421A04D24009BF0C4 /* karimonoUITests.swift */; };
-		AADB43C821A0585F009BF0C4 /* NewBorrowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADB43C721A0585F009BF0C4 /* NewBorrowingViewController.swift */; };
-		AADB43CA21A0589C009BF0C4 /* NewBorrowing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADB43C921A0589C009BF0C4 /* NewBorrowing.storyboard */; };
 		AADB43D221A060DE009BF0C4 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADB43D121A060DE009BF0C4 /* RequestManager.swift */; };
 		AADB43D521A068C1009BF0C4 /* ReturningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADB43D421A068C1009BF0C4 /* ReturningViewController.swift */; };
 		AADB43D721A068CB009BF0C4 /* Returning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADB43D621A068CB009BF0C4 /* Returning.storyboard */; };
@@ -58,6 +56,14 @@
 		AAF552DE21BBBFF000803D1B /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF552DD21BBBFF000803D1B /* BaseLabel.swift */; };
 		AAF552E121BBC04900803D1B /* UIColor+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF552E021BBC04900803D1B /* UIColor+Extenstions.swift */; };
 		AAF552E321BBC28C00803D1B /* SmallRegulerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF552E221BBC28C00803D1B /* SmallRegulerLabel.swift */; };
+		AEC85EAE21E211A200A161B3 /* TeamBorrowingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC85EAD21E211A200A161B3 /* TeamBorrowingsViewController.swift */; };
+		AEC85EB021E211C100A161B3 /* TeamBorrowingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC85EAF21E211C000A161B3 /* TeamBorrowingsViewModel.swift */; };
+		AEC85EB221E211E900A161B3 /* TeamBorrowingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEC85EB121E211E900A161B3 /* TeamBorrowingsViewController.storyboard */; };
+		AEC85EB421E22E1100A161B3 /* BorrowingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC85EB321E22E1100A161B3 /* BorrowingCell.swift */; };
+		AEC85EB621E22E1C00A161B3 /* BorrowingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEC85EB521E22E1C00A161B3 /* BorrowingCell.xib */; };
+		AEC85EB921E2312500A161B3 /* NewBorrowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC85EB821E2312500A161B3 /* NewBorrowingViewController.swift */; };
+		AEC85EBB21E2313600A161B3 /* NewBorrowingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC85EBA21E2313600A161B3 /* NewBorrowingViewModel.swift */; };
+		AEC85EBD21E2314700A161B3 /* NewBorrwoingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEC85EBC21E2314700A161B3 /* NewBorrwoingViewController.storyboard */; };
 		CE8971389D2D026D5A01D5AB /* Pods_karimono.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB5E3A8F1177B878E9EB4B4 /* Pods_karimono.framework */; };
 		CF69F9465FD48C083F732199 /* Pods_karimonoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131C45965E34DC5FCBAF77FF /* Pods_karimonoUITests.framework */; };
 /* End PBXBuildFile section */
@@ -136,8 +142,6 @@
 		AADB43B021A04D24009BF0C4 /* karimonoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = karimonoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADB43B421A04D24009BF0C4 /* karimonoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = karimonoUITests.swift; sourceTree = "<group>"; };
 		AADB43B621A04D24009BF0C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AADB43C721A0585F009BF0C4 /* NewBorrowingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBorrowingViewController.swift; sourceTree = "<group>"; };
-		AADB43C921A0589C009BF0C4 /* NewBorrowing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewBorrowing.storyboard; sourceTree = "<group>"; };
 		AADB43D121A060DE009BF0C4 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		AADB43D421A068C1009BF0C4 /* ReturningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturningViewController.swift; sourceTree = "<group>"; };
 		AADB43D621A068CB009BF0C4 /* Returning.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Returning.storyboard; sourceTree = "<group>"; };
@@ -145,6 +149,14 @@
 		AAF552DD21BBBFF000803D1B /* BaseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
 		AAF552E021BBC04900803D1B /* UIColor+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extenstions.swift"; sourceTree = "<group>"; };
 		AAF552E221BBC28C00803D1B /* SmallRegulerLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallRegulerLabel.swift; sourceTree = "<group>"; };
+		AEC85EAD21E211A200A161B3 /* TeamBorrowingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamBorrowingsViewController.swift; sourceTree = "<group>"; };
+		AEC85EAF21E211C000A161B3 /* TeamBorrowingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamBorrowingsViewModel.swift; sourceTree = "<group>"; };
+		AEC85EB121E211E900A161B3 /* TeamBorrowingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamBorrowingsViewController.storyboard; sourceTree = "<group>"; };
+		AEC85EB321E22E1100A161B3 /* BorrowingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowingCell.swift; sourceTree = "<group>"; };
+		AEC85EB521E22E1C00A161B3 /* BorrowingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BorrowingCell.xib; sourceTree = "<group>"; };
+		AEC85EB821E2312500A161B3 /* NewBorrowingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBorrowingViewController.swift; sourceTree = "<group>"; };
+		AEC85EBA21E2313600A161B3 /* NewBorrowingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBorrowingViewModel.swift; sourceTree = "<group>"; };
+		AEC85EBC21E2314700A161B3 /* NewBorrwoingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewBorrwoingViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,6 +373,8 @@
 		AADB43C421A057F1009BF0C4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AEC85EB721E230E500A161B3 /* NewBorroing */,
+				AEC85EAC21E2118F00A161B3 /* TeamBorrowings */,
 				AAB560B421E07AB100D93E1C /* TeamAuth */,
 				AAB5609F21E0631200D93E1C /* BorrowingList */,
 				AAB5609421E04C4600D93E1C /* Welcome */,
@@ -371,19 +385,9 @@
 				AA0BB37C21BBDB9E00C7665A /* TextPicker */,
 				AADB43CC21A05A27009BF0C4 /* BorrowingList */,
 				AADB43D321A068AD009BF0C4 /* Returning */,
-				AADB43CB21A05A1B009BF0C4 /* NewBorrowing */,
 				AAB5609D21E0622C00D93E1C /* Teams */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		AADB43CB21A05A1B009BF0C4 /* NewBorrowing */ = {
-			isa = PBXGroup;
-			children = (
-				AADB43C721A0585F009BF0C4 /* NewBorrowingViewController.swift */,
-				AADB43C921A0589C009BF0C4 /* NewBorrowing.storyboard */,
-			);
-			path = NewBorrowing;
 			sourceTree = "<group>";
 		};
 		AADB43CC21A05A27009BF0C4 /* BorrowingList */ = {
@@ -410,6 +414,28 @@
 			);
 			name = Extenstions;
 			path = View;
+			sourceTree = "<group>";
+		};
+		AEC85EAC21E2118F00A161B3 /* TeamBorrowings */ = {
+			isa = PBXGroup;
+			children = (
+				AEC85EAD21E211A200A161B3 /* TeamBorrowingsViewController.swift */,
+				AEC85EAF21E211C000A161B3 /* TeamBorrowingsViewModel.swift */,
+				AEC85EB121E211E900A161B3 /* TeamBorrowingsViewController.storyboard */,
+				AEC85EB321E22E1100A161B3 /* BorrowingCell.swift */,
+				AEC85EB521E22E1C00A161B3 /* BorrowingCell.xib */,
+			);
+			path = TeamBorrowings;
+			sourceTree = "<group>";
+		};
+		AEC85EB721E230E500A161B3 /* NewBorroing */ = {
+			isa = PBXGroup;
+			children = (
+				AEC85EB821E2312500A161B3 /* NewBorrowingViewController.swift */,
+				AEC85EBA21E2313600A161B3 /* NewBorrowingViewModel.swift */,
+				AEC85EBC21E2314700A161B3 /* NewBorrwoingViewController.storyboard */,
+			);
+			path = NewBorroing;
 			sourceTree = "<group>";
 		};
 		F1DF41DB665CC23990788C59 /* Pods */ = {
@@ -533,6 +559,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC85EB221E211E900A161B3 /* TeamBorrowingsViewController.storyboard in Resources */,
 				AAB5609821E04C9300D93E1C /* WelcomeViewController.storyboard in Resources */,
 				AAB5608C21DF98E100D93E1C /* AccountAuthViewController.storyboard in Resources */,
 				AADB439F21A04D23009BF0C4 /* LaunchScreen.storyboard in Resources */,
@@ -543,8 +570,9 @@
 				AAB560A421E0631200D93E1C /* BorrowingItems.storyboard in Resources */,
 				AADB439A21A04D22009BF0C4 /* Main.storyboard in Resources */,
 				AAB560AD21E0644A00D93E1C /* TeamCell.xib in Resources */,
-				AADB43CA21A0589C009BF0C4 /* NewBorrowing.storyboard in Resources */,
+				AEC85EB621E22E1C00A161B3 /* BorrowingCell.xib in Resources */,
 				AADB43D721A068CB009BF0C4 /* Returning.storyboard in Resources */,
+				AEC85EBD21E2314700A161B3 /* NewBorrwoingViewController.storyboard in Resources */,
 				AA0BB38021BBDBB800C7665A /* TextPicker.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -608,7 +636,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-karimono/Pods-karimono-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-karimono/Pods-karimono-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -621,7 +649,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-karimono/Pods-karimono-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-karimono/Pods-karimono-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E12BE275C77CFE6E1F71EBEA /* [CP] Check Pods Manifest.lock */ = {
@@ -652,11 +680,13 @@
 				AAA60BF221BBD42F00E012A4 /* BaseButton.swift in Sources */,
 				AAF552E121BBC04900803D1B /* UIColor+Extenstions.swift in Sources */,
 				AAB560BA21E07AEA00D93E1C /* TeamAuthViewModel.swift in Sources */,
-				AADB43C821A0585F009BF0C4 /* NewBorrowingViewController.swift in Sources */,
 				AAB5608021DF475A00D93E1C /* BorrowingRequest.swift in Sources */,
+				AEC85EBB21E2313600A161B3 /* NewBorrowingViewModel.swift in Sources */,
 				AAB5608921DF541D00D93E1C /* DataRepository.swift in Sources */,
+				AEC85EAE21E211A200A161B3 /* TeamBorrowingsViewController.swift in Sources */,
 				AAF552DE21BBBFF000803D1B /* BaseLabel.swift in Sources */,
 				AAB5609A21E04CA400D93E1C /* WelcomeViewModel.swift in Sources */,
+				AEC85EB021E211C100A161B3 /* TeamBorrowingsViewModel.swift in Sources */,
 				AAB560AB21E063CB00D93E1C /* TeamsViewModel.swift in Sources */,
 				AAB560BC21E0833D00D93E1C /* RxSwift+Extenstions.swift in Sources */,
 				AA64C81721BBCAE600BAE094 /* MainViewController.swift in Sources */,
@@ -670,6 +700,7 @@
 				AAB560AF21E0645700D93E1C /* TeamCell.swift in Sources */,
 				AADB43D221A060DE009BF0C4 /* RequestManager.swift in Sources */,
 				AAB560A621E0631200D93E1C /* BorrowingItemCell.swift in Sources */,
+				AEC85EB421E22E1100A161B3 /* BorrowingCell.swift in Sources */,
 				AAB5608E21DF9CB400D93E1C /* BaseViewController.swift in Sources */,
 				AAB5609C21E0622600D93E1C /* TeamsViewController.swift in Sources */,
 				AAB5608521DF4ABB00D93E1C /* AccountAuthViewController.swift in Sources */,
@@ -682,6 +713,7 @@
 				AAB5608721DF510900D93E1C /* ViewModelInjectable.swift in Sources */,
 				AA0BB37E21BBDBAE00C7665A /* TextPickerViewController.swift in Sources */,
 				AADB439521A04D22009BF0C4 /* AppDelegate.swift in Sources */,
+				AEC85EB921E2312500A161B3 /* NewBorrowingViewController.swift in Sources */,
 				AA0BB37B21BBDA6F00C7665A /* BaseTextFeild.swift in Sources */,
 				AAF552E321BBC28C00803D1B /* SmallRegulerLabel.swift in Sources */,
 			);

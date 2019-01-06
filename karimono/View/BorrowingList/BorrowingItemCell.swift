@@ -14,8 +14,8 @@ class BorrowingItemCell: UITableViewCell {
     @IBOutlet weak var background: DropShadowBackgournd!
 
     func fill(with borrowing: Borrowing) {
-        borrowerName.text = borrowing.user
-        itemNameLabel.text = borrowing.item
+
+        
     }
 
     override func setHighlighted(_ highlighted: Bool, animated: Bool) {

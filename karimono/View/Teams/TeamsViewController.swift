@@ -21,6 +21,7 @@ class TeamsViewController: BaseViewController, ViewModelInjectable {
         bindLoadingStatus()
 
         tableView.dataSource = self
+        tableView.delegate = self
         TeamCell.register(to: tableView)
 
         createTeamButton.rx.tap.asObservable()
@@ -34,7 +35,10 @@ class TeamsViewController: BaseViewController, ViewModelInjectable {
         viewModel.teams
             .bind(onNext: { [weak self] _ in self?.tableView.reloadData() })
             .disposed(by: bag)
+    }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         viewModel.fetch()
     }
 
@@ -63,3 +67,12 @@ extension TeamsViewController: UITableViewDataSource {
     }
 }
 
+extension TeamsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let team = viewModel.teams.value[indexPath.row]
+        let vm = TeamBorrowingViewModel(team: team)
+        let vc = TeamBorrowingsViewController.viewController(viewModel: vm, repository: viewModel.repository)
+
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}

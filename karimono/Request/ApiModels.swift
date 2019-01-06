@@ -10,8 +10,10 @@ import Foundation
 
 
 struct Borrowing: Codable {
-    let user: String
-    let item: String
+    let uuid: String
+    let itemName: String
+//    let account: Account
+//    let team: Team
 }
 
 struct Returning: Codable {

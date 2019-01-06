@@ -20,13 +20,18 @@ protocol Repositable {
     func createTeam(_ payload: AuthTeamRequestData) -> LongAsyncData<TeamAuthRequest.Response>
     func joinTeam(_ payload: AuthTeamRequestData) -> LongAsyncData<TeamAuthRequest.Response>
 
+    func getTeamBorrowing(_ payload: GetTeamBorrowingItemRequest) -> LongAsyncData<GetTeamBorrowingItemRequest.Response>
+    func newBorrowing(_ payload: NewBorrowingRequest) -> LongAsyncData<NewBorrowingRequest.Response>
+
     func registerAccountAuth(_ authData: AccountAuthResponse)
-    func getMe() -> Account
+    func getMe() -> Account?
     func hasLogin() -> Bool
     func deleteLogin()
 }
 
 class DataRepository: Repositable {
+
+
     let executor: RequestExecutable
     let secureTokenKey = "x-karimono-token"
     private let accessTokenKey = "accessTokenKey"
@@ -67,9 +72,9 @@ class DataRepository: Repositable {
         return UserDefaults.standard.string(forKey: accessTokenKey)
     }
 
-    func getMe() -> Account {
+    func getMe() -> Account? {
         guard let name = UserDefaults.standard.string(forKey: accountNameKey) else {
-            fatalError()
+           return nil
         }
         let id = UserDefaults.standard.integer(forKey: accountIdKey)
         return Account(name: name, id: id)
@@ -98,5 +103,13 @@ class DataRepository: Repositable {
 
     func checkName(_ payload: AccountValidationRquest) -> LongAsyncData<AccountValidationRquest.Response> {
         return executor.execRequest(handler: payload, addtionalHeader: [:])
+    }
+
+    func getTeamBorrowing(_ payload: GetTeamBorrowingItemRequest) -> LongAsyncData<GetTeamBorrowingItemRequest.Response> {
+        return executor.execRequest(handler: payload, addtionalHeader: requestToken)
+    }
+
+    func newBorrowing(_ payload: NewBorrowingRequest) -> LongAsyncData<NewBorrowingRequest.Response> {
+        return executor.execRequest(handler: payload, addtionalHeader: requestToken)
     }
 }
