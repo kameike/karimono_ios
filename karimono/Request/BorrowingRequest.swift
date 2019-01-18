@@ -36,7 +36,7 @@ struct GetTeamBorrowingItemRequest: RequestBase {
 
 struct NewBorrowingRequest: RequestBase {
     typealias Body = BorrowingRequestData
-    typealias Response = Borrowing
+    typealias Response = BorrowingResponse
 
     let payload: BorrowingRequestData
     let path: String  = "borrowings"
@@ -52,4 +52,16 @@ struct BorrowingItemRequest: RequestBase {
 
     let method: RequestMethod = .post
     let path = "borrowings"
+}
+
+struct ReturnBorrowingRequest: RequestBase {
+    typealias Response = BorrowingResponse
+    typealias Body = Empty
+    let payload = Empty()
+
+    let method: RequestMethod = .delete
+    let borrowing: Borrowing
+    var path: String {
+        return "borrowings/\(borrowing.idHash)"
+    }
 }

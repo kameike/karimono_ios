@@ -17,14 +17,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5U4-QN-yQK">
-                        <rect key="frame" x="16" y="11" width="219" height="47"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5U4-QN-yQK" customClass="BigLabel" customModule="karimono" customModuleProvider="target">
+                        <rect key="frame" x="16" y="11" width="343" height="44"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="5U4-QN-yQK" firstAttribute="leading" secondItem="6qR-Dq-hdb" secondAttribute="leadingMargin" id="6Gz-i6-qeL"/>
+                    <constraint firstItem="5U4-QN-yQK" firstAttribute="top" secondItem="6qR-Dq-hdb" secondAttribute="topMargin" id="CnQ-g1-rvV"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="5U4-QN-yQK" secondAttribute="bottom" id="E0m-tN-K0f"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="5U4-QN-yQK" secondAttribute="trailing" id="k3m-3M-mL9"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="teamNameLabel" destination="5U4-QN-yQK" id="L2w-hT-eI0"/>

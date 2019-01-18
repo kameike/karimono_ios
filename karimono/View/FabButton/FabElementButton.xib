@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FabElementButton" customModule="karimono" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="228"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHq-eH-Jdl">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0bh-MG-wZL">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="BSd-8b-Nz2"/>
+                                <constraint firstAttribute="width" constant="60" id="DMc-cC-fiY"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nX6-0c-Eo1" customClass="BaseLabel" customModule="karimono" customModuleProvider="target">
+                            <rect key="frame" x="75" y="14.5" width="52" height="31"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ts-tv-jee">
+                                    <rect key="frame" x="5" y="5" width="42" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="0Ts-tv-jee" firstAttribute="top" secondItem="nX6-0c-Eo1" secondAttribute="top" constant="5" id="WQ0-IQ-dZx"/>
+                                <constraint firstItem="0Ts-tv-jee" firstAttribute="leading" secondItem="nX6-0c-Eo1" secondAttribute="leading" constant="5" id="Y2i-P4-yWi"/>
+                                <constraint firstAttribute="trailing" secondItem="0Ts-tv-jee" secondAttribute="trailing" constant="5" id="Z0U-GJ-uE1"/>
+                                <constraint firstAttribute="bottom" secondItem="0Ts-tv-jee" secondAttribute="bottom" constant="5" id="pXF-e7-H44"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="nX6-0c-Eo1" firstAttribute="centerY" secondItem="HHq-eH-Jdl" secondAttribute="centerY" id="EXX-bb-Hf0"/>
+                        <constraint firstItem="0bh-MG-wZL" firstAttribute="top" secondItem="HHq-eH-Jdl" secondAttribute="top" id="O5B-QS-b8g"/>
+                        <constraint firstItem="0bh-MG-wZL" firstAttribute="leading" secondItem="HHq-eH-Jdl" secondAttribute="leading" id="aw9-ve-xbe"/>
+                        <constraint firstAttribute="bottom" secondItem="0bh-MG-wZL" secondAttribute="bottom" id="bOv-Rw-nsu"/>
+                        <constraint firstItem="nX6-0c-Eo1" firstAttribute="leading" secondItem="0bh-MG-wZL" secondAttribute="trailing" constant="15" id="tyI-bf-Dfl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="HHq-eH-Jdl" secondAttribute="trailing" id="9cB-ny-VNW"/>
+                <constraint firstItem="HHq-eH-Jdl" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="JmW-4F-Tyt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="HHq-eH-Jdl" secondAttribute="bottom" id="Lke-nm-7I5"/>
+                <constraint firstItem="HHq-eH-Jdl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ZDp-th-H9F"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="image" destination="0bh-MG-wZL" id="fO0-Y4-2qN"/>
+                <outlet property="label" destination="0Ts-tv-jee" id="M17-ea-Trc"/>
+                <outlet property="labelContainer" destination="nX6-0c-Eo1" id="o9N-Jy-FAq"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="47.676161919040482"/>
+        </view>
+    </objects>
+</document>

@@ -21,30 +21,35 @@
                                 <rect key="frame" x="0.0" y="188" width="375" height="479"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSo-Fs-yq6" customClass="BaseButton" customModule="karimono" customModuleProvider="target">
-                                <rect key="frame" x="16" y="66" width="77" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="つくる"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBM-Vw-LbY" customClass="BaseButton" customModule="karimono" customModuleProvider="target">
-                                <rect key="frame" x="112" y="66" width="91" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="参加する"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXh-K3-bpi" customClass="BaseButton" customModule="karimono" customModuleProvider="target">
-                                <rect key="frame" x="234" y="66" width="104" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title=" ログアウト"/>
-                                <connections>
-                                    <action selector="logout:" destination="29W-hT-5mJ" eventType="touchUpInside" id="QW0-Wv-cV6"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="jEQ-CY-K2c">
+                                <rect key="frame" x="0.0" y="20" width="375" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSo-Fs-yq6" customClass="BaseButton" customModule="karimono" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="182" height="30"/>
+                                        <state key="normal" title="つくる"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBM-Vw-LbY" customClass="BaseButton" customModule="karimono" customModuleProvider="target">
+                                        <rect key="frame" x="207" y="0.0" width="62" height="30"/>
+                                        <state key="normal" title="参加する"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXh-K3-bpi" customClass="BaseButton" customModule="karimono" customModuleProvider="target">
+                                        <rect key="frame" x="294" y="0.0" width="81" height="30"/>
+                                        <state key="normal" title=" ログアウト"/>
+                                        <connections>
+                                            <action selector="logout:" destination="29W-hT-5mJ" eventType="touchUpInside" id="QW0-Wv-cV6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="jEQ-CY-K2c" firstAttribute="leading" secondItem="tW2-hu-8U4" secondAttribute="leading" id="5hk-mP-IRD"/>
                             <constraint firstItem="MC1-Be-qQl" firstAttribute="top" secondItem="tW2-hu-8U4" secondAttribute="top" constant="168" id="7Br-oU-pJl"/>
                             <constraint firstItem="tW2-hu-8U4" firstAttribute="bottom" secondItem="MC1-Be-qQl" secondAttribute="bottom" id="O5s-XH-rNI"/>
                             <constraint firstItem="MC1-Be-qQl" firstAttribute="leading" secondItem="tW2-hu-8U4" secondAttribute="leading" id="U25-6B-lk3"/>
+                            <constraint firstItem="tW2-hu-8U4" firstAttribute="trailing" secondItem="jEQ-CY-K2c" secondAttribute="trailing" id="YK3-Q0-veu"/>
+                            <constraint firstItem="jEQ-CY-K2c" firstAttribute="top" secondItem="tW2-hu-8U4" secondAttribute="top" id="a1o-LL-Agf"/>
                             <constraint firstItem="tW2-hu-8U4" firstAttribute="trailing" secondItem="MC1-Be-qQl" secondAttribute="trailing" id="gXG-MO-eKo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tW2-hu-8U4"/>

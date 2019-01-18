@@ -23,6 +23,7 @@ class MainViewController: UIViewController {
         }
     }
 
+    @IBOutlet weak var fabContainer: UIView!
     let repo = DataRepository(executor: RequestExecuter())
 
 
@@ -31,34 +32,51 @@ class MainViewController: UIViewController {
         present(vc, animated: true, completion: nil)
     }
 
-    let tabbar = UITabBarController()
+    var prepared = false
 
     func appendBorrowingViews() {
-        if tabbar.parent != nil {
+        if prepared {
             return
         }
-
-        tabbar.tabBar.barTintColor = UIColor.Karimono.main
-        tabbar.tabBar.tintColor = .white
-        tabbar.tabBar.unselectedItemTintColor = UIColor.Karimono.unselectedTabBar
-        tabbar.tabBar.isTranslucent = false
-
-//        let list = BorrowingItemsViewController.viewController()
-//        let borrowing = NewBorrowingViewController.viewController()
-//        let returning = ReturningViewController.viewController()
-//
-//        tabbar.addChild(list)
-//        tabbar.addChild(borrowing)
-//        tabbar.addChild(returning)
-
-
+        prepared = true
 
         let teams = TeamsViewController.viewController(viewModel: TeamsViewModel(), repository: repo)
         let nav = UINavigationController(rootViewController: teams)
-        tabbar.addChild(nav)
-        
-        addChild(tabbar)
-        view.addSubview(tabbar.view)
-        tabbar.didMove(toParent: self)
+
+        nav.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        nav.navigationBar.shadowImage = UIImage()
+        nav.navigationBar.isTranslucent = true
+        nav.navigationBar.tintColor = .black
+
+
+        addChild(nav)
+
+        guard let cv = nav.view else {
+            return
+        }
+        view.insertSubview(cv, at: 0)
+
+        NSLayoutConstraint.activate([
+            cv.topAnchor.constraint(equalTo: view.topAnchor),
+            cv.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            cv.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            cv.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            ])
+
+        nav.didMove(toParent: self)
+
+
+        let fab = FabButtonUIViewController.viewController(viewModel: FabButtonViewModel(), repository: repo)
+        addChild(fab)
+        fab.view.translatesAutoresizingMaskIntoConstraints = false
+        fabContainer.addSubview(fab.view)
+        NSLayoutConstraint.activate([
+            fab.view.bottomAnchor.constraint(equalTo: fabContainer.bottomAnchor),
+            fab.view.topAnchor.constraint(equalTo: fabContainer.topAnchor),
+            fab.view.leadingAnchor.constraint(equalTo: fabContainer.leadingAnchor),
+            fab.view.trailingAnchor.constraint(equalTo: fabContainer.trailingAnchor),
+            ])
+
+        fab.didMove(toParent: self)
     }
 }

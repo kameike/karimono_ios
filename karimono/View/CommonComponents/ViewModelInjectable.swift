@@ -23,15 +23,8 @@ protocol ViewModelInjectable {
     var viewModel: ViewModel! { get set }
 }
 
-extension ViewModelInjectable where Self: UIViewController {
-    static func viewController(viewModel: ViewModel, repository: Repositable) -> UIViewController {
-        var vc = loadFromStoryBoard()
-        vc.viewModel = viewModel
-        vc.viewModel.repository = repository
-        return vc
-    }
-
-    private static func loadFromStoryBoard() -> Self {
+extension StoryboardInstanciatable where Self: UIViewController {
+    static func loadFromStoryBoard() -> Self {
         guard let vc = UIStoryboard.init(name: storyboardName, bundle: nil).instantiateInitialViewController() as? Self else {
             fatalError()
         }
@@ -42,6 +35,50 @@ extension ViewModelInjectable where Self: UIViewController {
         return String(describing: self)
     }
 }
+
+extension ViewControllerCreatable where Self: UIViewController{
+    static func createViewController () -> Self {
+        return Self()
+    }
+}
+
+extension ViewControllerProvidable where Self: ViewModelInjectable {
+    static func viewController(viewModel: ViewModel, repository: Repositable) -> Self {
+        var vc = provideViewContoller()
+        vc.viewModel = viewModel
+        vc.viewModel.repository = repository
+        return vc
+    }
+}
+
+typealias StoryBoardBasedViewController = StoryboardInstanciatable & ViewControllerProvidable
+typealias InitBaseViewController = ViewControllerCreatable & ViewControllerProvidable
+
+extension StoryboardInstanciatable where Self: ViewControllerProvidable {
+    static func provideViewContoller() -> Self {
+        return loadFromStoryBoard()
+    }
+}
+
+extension ViewControllerCreatable where Self: ViewControllerProvidable {
+    static func provideViewContoller() -> Self {
+        return createViewController()
+    }
+}
+
+protocol ViewControllerProvidable {
+    static func provideViewContoller() -> Self
+}
+
+protocol StoryboardInstanciatable {
+    static func loadFromStoryBoard() -> Self
+}
+
+protocol ViewControllerCreatable {
+    static func createViewController () -> Self
+}
+
+
 
 protocol NibProvidable {
     static func loadFromXib() -> UINib
@@ -73,9 +110,9 @@ extension NibProvidable where Self: UIView {
     }
 
     static func loadFromNib() -> Self {
-        let nib = loadFromXib()
-        let view = Self()
-        nib.instantiate(withOwner: view, options: nil)
+        guard let view = loadFromXib().instantiate(withOwner: nil, options: nil).first as? Self else {
+            fatalError()
+        }
         return view
     }
 

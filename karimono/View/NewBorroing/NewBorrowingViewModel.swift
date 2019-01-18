@@ -32,7 +32,7 @@ class NewBorrwoingViewModel: BaseViewModel, RepositoryInjectable {
         bindShowErrorMessage(req.map { $0.generalState })
 
         req.flatMap { $0.observeComplete }
-            .map { $0 }
+            .map { $0.borrowing }
             .observeOn(MainScheduler.instance)
             .bind(to: borrowComplete)
             .disposed(by: bag)

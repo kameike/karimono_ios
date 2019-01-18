@@ -18,26 +18,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bnO-22-maF">
-                                <rect key="frame" x="0.0" y="220" width="375" height="447"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VR-n6-juG" customClass="BaseButton" customModule="karimono" customModuleProvider="target">
-                                <rect key="frame" x="113" y="90" width="149" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bnO-22-maF" firstAttribute="leading" secondItem="JHv-bq-9z7" secondAttribute="leading" id="GuC-5Z-vOV"/>
                             <constraint firstItem="JHv-bq-9z7" firstAttribute="trailing" secondItem="bnO-22-maF" secondAttribute="trailing" id="S0X-cG-yNS"/>
                             <constraint firstItem="JHv-bq-9z7" firstAttribute="bottom" secondItem="bnO-22-maF" secondAttribute="bottom" id="ViP-P8-9Yd"/>
-                            <constraint firstItem="bnO-22-maF" firstAttribute="top" secondItem="JHv-bq-9z7" secondAttribute="top" constant="200" id="WK7-8e-RWN"/>
+                            <constraint firstItem="bnO-22-maF" firstAttribute="top" secondItem="EhT-qq-m1A" secondAttribute="top" id="WK7-8e-RWN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JHv-bq-9z7"/>
                     </view>
                     <connections>
-                        <outlet property="newBorrowingButton" destination="3VR-n6-juG" id="f1m-Fz-6eG"/>
                         <outlet property="tableView" destination="bnO-22-maF" id="aZr-zT-xjZ"/>
                     </connections>
                 </viewController>

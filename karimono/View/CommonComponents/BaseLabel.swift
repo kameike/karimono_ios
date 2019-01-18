@@ -25,6 +25,7 @@ class BaseLabel: UILabel {
     }
 
     func commonInit() {
+        font = UIFont.systemFont(ofSize: 16, weight: .regular)
         textColor = UIColor.Karimono.textPrimary
     }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WelcomeViewController: BaseViewController, ViewModelInjectable {
+class WelcomeViewController: BaseViewController,  StoryBoardBasedViewController, ViewModelInjectable {
     typealias ViewModel = WelcomeViewModel
     var viewModel: WelcomeViewController.ViewModel!
 

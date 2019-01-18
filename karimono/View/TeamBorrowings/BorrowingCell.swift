@@ -11,9 +11,22 @@ import UIKit
 class BorrowingCell: UITableViewCell, CellDequeuealbe {
     @IBOutlet weak var borrowingLabel: UILabel!
     @IBOutlet weak var memo: UILabel!
+    @IBOutlet weak var name: SmallLabel!
+    @IBOutlet weak var date: SmallLabel!
 
     func fill(with borrowing: Borrowing) {
         borrowingLabel.text = borrowing.itemName
-        // memo.text = borrowing.memo
+        if borrowing.memo == "" {
+            memo.isHidden = true
+        } else {
+            memo.text = borrowing.memo
+            memo.isHidden = false
+        }
+
+        name.text = borrowing.account.name
+
+        let d = Date()
+
+        date.text = DateFormatter.localizedString(from: d, dateStyle: .short, timeStyle: .short)
     }
 }

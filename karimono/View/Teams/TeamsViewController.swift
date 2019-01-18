@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TeamsViewController: BaseViewController, ViewModelInjectable {
+class TeamsViewController: BaseViewController, StoryBoardBasedViewController, ViewModelInjectable {
     typealias ViewModel = TeamsViewModel
     var viewModel: TeamsViewController.ViewModel!
 
@@ -19,6 +19,7 @@ class TeamsViewController: BaseViewController, ViewModelInjectable {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindLoadingStatus()
+        title = "チーム一覧"
 
         tableView.dataSource = self
         tableView.delegate = self

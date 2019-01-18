@@ -12,9 +12,12 @@
 		AA0BB37E21BBDBAE00C7665A /* TextPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0BB37D21BBDBAE00C7665A /* TextPickerViewController.swift */; };
 		AA0BB38021BBDBB800C7665A /* TextPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA0BB37F21BBDBB800C7665A /* TextPicker.storyboard */; };
 		AA0BB38221BBDD9100C7665A /* SmallBoldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0BB38121BBDD9100C7665A /* SmallBoldLabel.swift */; };
+		AA14561321E639660010E4BB /* FabButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14561221E639660010E4BB /* FabButtonViewController.swift */; };
+		AA14561521E65A0E0010E4BB /* QrCodeReaderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA14561421E65A0E0010E4BB /* QrCodeReaderViewController.storyboard */; };
 		AA2F6BDA21BC2371007F5DCF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F6BD921BC2371007F5DCF /* LoadingView.swift */; };
 		AA2F6BDE21BC2AF1007F5DCF /* AuthRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F6BDD21BC2AF1007F5DCF /* AuthRequests.swift */; };
 		AA38DA8E21BBBD7B00A3400B /* DropShadowBackgournd.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA38DA8D21BBBD7B00A3400B /* DropShadowBackgournd.swift */; };
+		AA44679D21E4CCC500649DD5 /* QrCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA44679C21E4CCC500649DD5 /* QrCodeReaderViewController.swift */; };
 		AA64C81721BBCAE600BAE094 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA64C81621BBCAE600BAE094 /* MainViewController.swift */; };
 		AAA60BF221BBD42F00E012A4 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA60BF121BBD42F00E012A4 /* BaseButton.swift */; };
 		AAB5607E21DF446400D93E1C /* ApiModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB5607D21DF446400D93E1C /* ApiModels.swift */; };
@@ -31,10 +34,6 @@
 		AAB5609821E04C9300D93E1C /* WelcomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAB5609721E04C9300D93E1C /* WelcomeViewController.storyboard */; };
 		AAB5609A21E04CA400D93E1C /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB5609921E04CA400D93E1C /* WelcomeViewModel.swift */; };
 		AAB5609C21E0622600D93E1C /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB5609B21E0622600D93E1C /* TeamsViewController.swift */; };
-		AAB560A421E0631200D93E1C /* BorrowingItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAB560A021E0631200D93E1C /* BorrowingItems.storyboard */; };
-		AAB560A521E0631200D93E1C /* BorrowingItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB560A121E0631200D93E1C /* BorrowingItemsViewController.swift */; };
-		AAB560A621E0631200D93E1C /* BorrowingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB560A221E0631200D93E1C /* BorrowingItemCell.swift */; };
-		AAB560A721E0631200D93E1C /* BorrowingItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB560A321E0631200D93E1C /* BorrowingItemCell.xib */; };
 		AAB560A921E063C100D93E1C /* TeamsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAB560A821E063C100D93E1C /* TeamsViewController.storyboard */; };
 		AAB560AB21E063CB00D93E1C /* TeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB560AA21E063CB00D93E1C /* TeamsViewModel.swift */; };
 		AAB560AD21E0644A00D93E1C /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB560AC21E0644A00D93E1C /* TeamCell.xib */; };
@@ -43,6 +42,8 @@
 		AAB560B821E07ADD00D93E1C /* TeamAuthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAB560B721E07ADD00D93E1C /* TeamAuthViewController.storyboard */; };
 		AAB560BA21E07AEA00D93E1C /* TeamAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB560B921E07AEA00D93E1C /* TeamAuthViewModel.swift */; };
 		AAB560BC21E0833D00D93E1C /* RxSwift+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB560BB21E0833D00D93E1C /* RxSwift+Extenstions.swift */; };
+		AABD5F5321EB1C810031E874 /* FabElementButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = AABD5F5221EB1C810031E874 /* FabElementButton.xib */; };
+		AABD5F5521EB1C910031E874 /* FabElementButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABD5F5421EB1C910031E874 /* FabElementButton.swift */; };
 		AADB439521A04D22009BF0C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADB439421A04D22009BF0C4 /* AppDelegate.swift */; };
 		AADB439A21A04D22009BF0C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADB439821A04D22009BF0C4 /* Main.storyboard */; };
 		AADB439C21A04D23009BF0C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AADB439B21A04D23009BF0C4 /* Assets.xcassets */; };
@@ -99,9 +100,12 @@
 		AA0BB37D21BBDBAE00C7665A /* TextPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPickerViewController.swift; sourceTree = "<group>"; };
 		AA0BB37F21BBDBB800C7665A /* TextPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextPicker.storyboard; sourceTree = "<group>"; };
 		AA0BB38121BBDD9100C7665A /* SmallBoldLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallBoldLabel.swift; sourceTree = "<group>"; };
+		AA14561221E639660010E4BB /* FabButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabButtonViewController.swift; sourceTree = "<group>"; };
+		AA14561421E65A0E0010E4BB /* QrCodeReaderViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QrCodeReaderViewController.storyboard; sourceTree = "<group>"; };
 		AA2F6BD921BC2371007F5DCF /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		AA2F6BDD21BC2AF1007F5DCF /* AuthRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequests.swift; sourceTree = "<group>"; };
 		AA38DA8D21BBBD7B00A3400B /* DropShadowBackgournd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropShadowBackgournd.swift; sourceTree = "<group>"; };
+		AA44679C21E4CCC500649DD5 /* QrCodeReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeReaderViewController.swift; sourceTree = "<group>"; };
 		AA64C81621BBCAE600BAE094 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AAA60BF121BBD42F00E012A4 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		AAB5607D21DF446400D93E1C /* ApiModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModels.swift; sourceTree = "<group>"; };
@@ -118,10 +122,6 @@
 		AAB5609721E04C9300D93E1C /* WelcomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeViewController.storyboard; sourceTree = "<group>"; };
 		AAB5609921E04CA400D93E1C /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		AAB5609B21E0622600D93E1C /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
-		AAB560A021E0631200D93E1C /* BorrowingItems.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BorrowingItems.storyboard; sourceTree = "<group>"; };
-		AAB560A121E0631200D93E1C /* BorrowingItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorrowingItemsViewController.swift; sourceTree = "<group>"; };
-		AAB560A221E0631200D93E1C /* BorrowingItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorrowingItemCell.swift; sourceTree = "<group>"; };
-		AAB560A321E0631200D93E1C /* BorrowingItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BorrowingItemCell.xib; sourceTree = "<group>"; };
 		AAB560A821E063C100D93E1C /* TeamsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamsViewController.storyboard; sourceTree = "<group>"; };
 		AAB560AA21E063CB00D93E1C /* TeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewModel.swift; sourceTree = "<group>"; };
 		AAB560AC21E0644A00D93E1C /* TeamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
@@ -130,6 +130,8 @@
 		AAB560B721E07ADD00D93E1C /* TeamAuthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamAuthViewController.storyboard; sourceTree = "<group>"; };
 		AAB560B921E07AEA00D93E1C /* TeamAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamAuthViewModel.swift; sourceTree = "<group>"; };
 		AAB560BB21E0833D00D93E1C /* RxSwift+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+Extenstions.swift"; sourceTree = "<group>"; };
+		AABD5F5221EB1C810031E874 /* FabElementButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FabElementButton.xib; sourceTree = "<group>"; };
+		AABD5F5421EB1C910031E874 /* FabElementButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabElementButton.swift; sourceTree = "<group>"; };
 		AADB439121A04D22009BF0C4 /* karimono.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = karimono.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADB439421A04D22009BF0C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AADB439921A04D22009BF0C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -206,6 +208,16 @@
 			path = TextPicker;
 			sourceTree = "<group>";
 		};
+		AA14561121E639570010E4BB /* FabButton */ = {
+			isa = PBXGroup;
+			children = (
+				AA14561221E639660010E4BB /* FabButtonViewController.swift */,
+				AABD5F5221EB1C810031E874 /* FabElementButton.xib */,
+				AABD5F5421EB1C910031E874 /* FabElementButton.swift */,
+			);
+			path = FabButton;
+			sourceTree = "<group>";
+		};
 		AA2F6BDB21BC2AC0007F5DCF /* Request */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,10 +246,18 @@
 			path = CommonComponents;
 			sourceTree = "<group>";
 		};
+		AA44679B21E4CCB400649DD5 /* QRReader */ = {
+			isa = PBXGroup;
+			children = (
+				AA44679C21E4CCC500649DD5 /* QrCodeReaderViewController.swift */,
+				AA14561421E65A0E0010E4BB /* QrCodeReaderViewController.storyboard */,
+			);
+			path = QRReader;
+			sourceTree = "<group>";
+		};
 		AAB5608321DF4A7800D93E1C /* AccountAuth */ = {
 			isa = PBXGroup;
 			children = (
-				AAB5608B21DF98E100D93E1C /* AccountAuthViewController.storyboard */,
 				AAB5608421DF4ABB00D93E1C /* AccountAuthViewController.swift */,
 				AAB5608F21DF9F6600D93E1C /* AccountAuthViewModel.swift */,
 			);
@@ -284,17 +304,6 @@
 			path = Teams;
 			sourceTree = "<group>";
 		};
-		AAB5609F21E0631200D93E1C /* BorrowingList */ = {
-			isa = PBXGroup;
-			children = (
-				AAB560A021E0631200D93E1C /* BorrowingItems.storyboard */,
-				AAB560A121E0631200D93E1C /* BorrowingItemsViewController.swift */,
-				AAB560A221E0631200D93E1C /* BorrowingItemCell.swift */,
-				AAB560A321E0631200D93E1C /* BorrowingItemCell.xib */,
-			);
-			path = BorrowingList;
-			sourceTree = "<group>";
-		};
 		AAB560B421E07AB100D93E1C /* TeamAuth */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +320,7 @@
 			children = (
 				AADB439821A04D22009BF0C4 /* Main.storyboard */,
 				AA64C81621BBCAE600BAE094 /* MainViewController.swift */,
+				AAB5608B21DF98E100D93E1C /* AccountAuthViewController.storyboard */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -373,28 +383,21 @@
 		AADB43C421A057F1009BF0C4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AA14561121E639570010E4BB /* FabButton */,
+				AA44679B21E4CCB400649DD5 /* QRReader */,
 				AEC85EB721E230E500A161B3 /* NewBorroing */,
 				AEC85EAC21E2118F00A161B3 /* TeamBorrowings */,
 				AAB560B421E07AB100D93E1C /* TeamAuth */,
-				AAB5609F21E0631200D93E1C /* BorrowingList */,
 				AAB5609421E04C4600D93E1C /* Welcome */,
 				AAB5609321DF9F8100D93E1C /* Base */,
 				AABFCBCF21BC0DFA00219B99 /* Main */,
 				AAB5608321DF4A7800D93E1C /* AccountAuth */,
 				AA38DA8C21BBBD6A00A3400B /* CommonComponents */,
-				AA0BB37C21BBDB9E00C7665A /* TextPicker */,
-				AADB43CC21A05A27009BF0C4 /* BorrowingList */,
-				AADB43D321A068AD009BF0C4 /* Returning */,
 				AAB5609D21E0622C00D93E1C /* Teams */,
+				AA0BB37C21BBDB9E00C7665A /* TextPicker */,
+				AADB43D321A068AD009BF0C4 /* Returning */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		AADB43CC21A05A27009BF0C4 /* BorrowingList */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BorrowingList;
 			sourceTree = "<group>";
 		};
 		AADB43D321A068AD009BF0C4 /* Returning */ = {
@@ -559,15 +562,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA14561521E65A0E0010E4BB /* QrCodeReaderViewController.storyboard in Resources */,
 				AEC85EB221E211E900A161B3 /* TeamBorrowingsViewController.storyboard in Resources */,
 				AAB5609821E04C9300D93E1C /* WelcomeViewController.storyboard in Resources */,
 				AAB5608C21DF98E100D93E1C /* AccountAuthViewController.storyboard in Resources */,
 				AADB439F21A04D23009BF0C4 /* LaunchScreen.storyboard in Resources */,
 				AADB439C21A04D23009BF0C4 /* Assets.xcassets in Resources */,
 				AAB560A921E063C100D93E1C /* TeamsViewController.storyboard in Resources */,
-				AAB560A721E0631200D93E1C /* BorrowingItemCell.xib in Resources */,
+				AABD5F5321EB1C810031E874 /* FabElementButton.xib in Resources */,
 				AAB560B821E07ADD00D93E1C /* TeamAuthViewController.storyboard in Resources */,
-				AAB560A421E0631200D93E1C /* BorrowingItems.storyboard in Resources */,
 				AADB439A21A04D22009BF0C4 /* Main.storyboard in Resources */,
 				AAB560AD21E0644A00D93E1C /* TeamCell.xib in Resources */,
 				AEC85EB621E22E1C00A161B3 /* BorrowingCell.xib in Resources */,
@@ -636,7 +639,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-karimono/Pods-karimono-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-karimono/Pods-karimono-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -649,7 +652,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-karimono/Pods-karimono-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-karimono/Pods-karimono-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E12BE275C77CFE6E1F71EBEA /* [CP] Check Pods Manifest.lock */ = {
@@ -693,23 +696,24 @@
 				AA2F6BDE21BC2AF1007F5DCF /* AuthRequests.swift in Sources */,
 				AADB43D521A068C1009BF0C4 /* ReturningViewController.swift in Sources */,
 				AA38DA8E21BBBD7B00A3400B /* DropShadowBackgournd.swift in Sources */,
+				AA44679D21E4CCC500649DD5 /* QrCodeReaderViewController.swift in Sources */,
 				AAF552DC21BBBFE200803D1B /* BigLabel.swift in Sources */,
 				AAB5609021DF9F6600D93E1C /* AccountAuthViewModel.swift in Sources */,
 				AAB5608221DF478000D93E1C /* AccountTeamRequest.swift in Sources */,
 				AAB5609621E04C7000D93E1C /* WelcomeViewController.swift in Sources */,
 				AAB560AF21E0645700D93E1C /* TeamCell.swift in Sources */,
 				AADB43D221A060DE009BF0C4 /* RequestManager.swift in Sources */,
-				AAB560A621E0631200D93E1C /* BorrowingItemCell.swift in Sources */,
 				AEC85EB421E22E1100A161B3 /* BorrowingCell.swift in Sources */,
 				AAB5608E21DF9CB400D93E1C /* BaseViewController.swift in Sources */,
 				AAB5609C21E0622600D93E1C /* TeamsViewController.swift in Sources */,
+				AA14561321E639660010E4BB /* FabButtonViewController.swift in Sources */,
 				AAB5608521DF4ABB00D93E1C /* AccountAuthViewController.swift in Sources */,
 				AA0BB38221BBDD9100C7665A /* SmallBoldLabel.swift in Sources */,
 				AAB560B621E07ACA00D93E1C /* TeamAuthViewController.swift in Sources */,
 				AAB5609221DF9F7A00D93E1C /* BaseViewModel.swift in Sources */,
+				AABD5F5521EB1C910031E874 /* FabElementButton.swift in Sources */,
 				AA2F6BDA21BC2371007F5DCF /* LoadingView.swift in Sources */,
 				AAB5607E21DF446400D93E1C /* ApiModels.swift in Sources */,
-				AAB560A521E0631200D93E1C /* BorrowingItemsViewController.swift in Sources */,
 				AAB5608721DF510900D93E1C /* ViewModelInjectable.swift in Sources */,
 				AA0BB37E21BBDBAE00C7665A /* TextPickerViewController.swift in Sources */,
 				AADB439521A04D22009BF0C4 /* AppDelegate.swift in Sources */,

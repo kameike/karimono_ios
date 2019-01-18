@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class AccountAuthViewController: BaseViewController, ViewModelInjectable {
+class AccountAuthViewController: BaseViewController, StoryBoardBasedViewController ,ViewModelInjectable {
     typealias ViewModel = AccountAuthViewModel
     var viewModel: AccountAuthViewModel!
 

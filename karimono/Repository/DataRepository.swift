@@ -22,6 +22,7 @@ protocol Repositable {
 
     func getTeamBorrowing(_ payload: GetTeamBorrowingItemRequest) -> LongAsyncData<GetTeamBorrowingItemRequest.Response>
     func newBorrowing(_ payload: NewBorrowingRequest) -> LongAsyncData<NewBorrowingRequest.Response>
+    func returnBorrowing(_ payload: Borrowing) -> LongAsyncData<ReturnBorrowingRequest.Response>
 
     func registerAccountAuth(_ authData: AccountAuthResponse)
     func getMe() -> Account?
@@ -111,5 +112,9 @@ class DataRepository: Repositable {
 
     func newBorrowing(_ payload: NewBorrowingRequest) -> LongAsyncData<NewBorrowingRequest.Response> {
         return executor.execRequest(handler: payload, addtionalHeader: requestToken)
+    }
+
+    func returnBorrowing(_ payload: Borrowing) -> LongAsyncData<ReturnBorrowingRequest.Response> {
+        return executor.execRequest(handler: ReturnBorrowingRequest.init(borrowing: payload), addtionalHeader: requestToken)
     }
 }

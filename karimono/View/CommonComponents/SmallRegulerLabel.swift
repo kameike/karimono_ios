@@ -27,5 +27,6 @@ class SmallLabel: BaseLabel {
     override func commonInit() {
         super.commonInit()
         font = .systemFont(ofSize: 14, weight: .regular)
+        textColor = .gray
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-class NewBorrwoingViewController: BaseViewController, ViewModelInjectable {
+class NewBorrwoingViewController: BaseViewController, StoryBoardBasedViewController, ViewModelInjectable {
     typealias ViewModel = NewBorrwoingViewModel
     var viewModel: NewBorrwoingViewController.ViewModel!
     @IBOutlet weak var teamName: UITextField!

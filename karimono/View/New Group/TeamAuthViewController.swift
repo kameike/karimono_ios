@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TeamAuthViewController: BaseViewController, ViewModelInjectable {
+class TeamAuthViewController: BaseViewController, StoryBoardBasedViewController, ViewModelInjectable {
     typealias ViewModel = TeamAuthViewModel
     var viewModel: TeamAuthViewModel!
     @IBOutlet weak var teamNameTextFeild: UITextField!
